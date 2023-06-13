@@ -1,7 +1,13 @@
 import './assets/main.css'
 
+import 'primeicons/primeicons.css';
+// icons
 import PrimeVue from 'primevue/config';
+//core
 import "primevue/resources/primevue.min.css";
+//theme
+import "primevue/resources/themes/lara-light-indigo/theme.css";
+
 
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'

@@ -8,15 +8,26 @@
       </div>
     </div>
     <!--menu-->
-    <div class="h-[calc(90vh-50px)] px-4 mt-8">
-       <div v-for="link in menu" :key="link.label">
-         <NavItem :item="link"/>
-       </div>
+    <div class="h-[calc(90vh-50px)] px-4 mt-8 flex flex-col justify-between">
+      <div class="w-full">
+        <div v-for="link in menu" :key="link.label">
+          <div v-for="item in link.children" :key="item.label">
+            <NavItem :item="item"/>
+          </div>
+        </div>
+      </div>
+      <div class="w-full">
+        <div v-for="link in others" :key="link.label">
+          <div v-for="item in link.children" :key="item.label">
+            <NavItem :item="item"/>
+          </div>
+        </div>
+      </div>
     </div>
   </nav>
 </template>
 <script setup lang="ts">
 import NavItem from "@/app/layouts/navlist/Index.vue";
 
-defineProps<{menu:Array<string>}>();
+defineProps<{menu:Array<string>, others: Array<string>}>();
 </script>

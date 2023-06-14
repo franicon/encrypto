@@ -1,8 +1,14 @@
 <template>
-  <router-link :to="`${item.to}`"  class="space-x-4 flex items-center mb-8 p-3 active">
-   <div :class="item.icon + ' inline-flex'" style="font-size: 1.2rem"></div>
+  <div v-if="item.to">
+    <router-link :to="`${item.to}`"  class="space-x-4 flex items-center mb-8 p-3 active">
+      <div :class="item.icon + ' inline-flex'" style="font-size: 1.2rem"></div>
+      <div class="text-md font-semibold ">{{ item.label }}</div>
+    </router-link>
+  </div>
+  <div v-else class="space-x-4 flex items-center mb-8 p-3">
+    <div :class="item.icon + ' inline-flex'" style="font-size: 1.2rem"></div>
     <div class="text-md font-semibold ">{{ item.label }}</div>
-  </router-link>
+  </div>
 </template>
 
 <script  setup lang="ts">

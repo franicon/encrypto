@@ -2,7 +2,9 @@
   <div>
     <div class="w-screen h-screen flex overflow-hidden">
       <!--side-->
-      <SideBar :menu="menuList" :others="others"/>
+     <div class="md:hidden xl:flex">
+       <SideBar :menu="menuList" :others="others"/>
+     </div>
       <!--sidebar collapse-->
       <NavCollapse :menu="menuList" :others="others"/>
       <!--top-->
@@ -19,12 +21,12 @@
 </template>
 
 <script setup lang="ts">
-import navList from "@/app/layouts/menu/menu.ts";
-import otherList from "@/app/layouts/menu/sub-menu";
+import navList from "@/app/layouts/menu/@menu.ts";
+import otherList from "@/app/layouts/menu/@sub-menu";
 
 import TopBar from "@/app/layouts/navbars/TopBar.vue";
-import SideBar from "@/app/layouts/navbars/SideBar.vue";
-import NavCollapse from "@/app/layouts/navbars/CollapseSideBar.vue";
+import SideBar from "@/app/layouts/navbars/desktop/SideBar.vue";
+import NavCollapse from "@/app/layouts/navbars/desktop/CollapseSideBar.vue";
 
 import {ref} from "vue";
 

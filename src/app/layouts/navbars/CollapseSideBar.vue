@@ -1,6 +1,7 @@
 <template>
   <nav class="flex 2xl:hidden">
-    <div class="w-full ">
+    <div class="w-full">
+      <!--side bar-->
       <Sidebar v-model:visible="collapseBar">
         <div class="w-full px-4 pb-8">
           <div class="font-semibold text-3xl">Encrypto</div>

@@ -1,6 +1,6 @@
 <template>
-  <!--side bar-->
   <nav class="hidden 2xl:flex 2xl:flex-col w-[400px] h-full bg-white border-r ">
+    <!--side bar-->
     <div class="w-full px-4 py-8">
       <div class="font-semibold text-3xl">Encrypto</div>
     </div>

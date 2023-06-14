@@ -4,7 +4,7 @@ const MainRoutes = {
         requiresAuth: true
     },
     redirect: '/dashboard',
-    component: () => import('@/app/layouts/FullLayouts.vue'),
+    component: () => import('@/app/layouts/MainLayouts.vue'),
     children: [
         {
             path: '/dashboard',

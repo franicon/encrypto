@@ -21,3 +21,6 @@ html {
 .p-sidebar-mask {
     cursor: pointer;
 }
+.pi{
+    line-height: 0 !important;
+}

@@ -1,14 +1,22 @@
 <template>
-  <nav class="hidden 2xl:flex 2xl:flex-col w-[400px] h-full bg-white border-r ">
+  <nav class="hidden 2xl:flex 2xl:flex-col w-[400px] h-full bg-white border-r px-5">
     <!--side bar-->
     <div class="w-full px-4 py-8">
-      <div class="font-semibold text-3xl">Encrypto</div>
+      <div class=" flex items-center space-x-4 mx-auto">
+<!--        <img src="public/logo.svg" class="flex h-12" alt="logo">-->
+        <div class="font-bold text-3xl">encrypto</div>
+      </div>
     </div>
     <!--menu-->
-    <div class="h-[calc(90vh-50px)] px-4">
-      <div class="">menu</div>
+    <div class="h-[calc(90vh-50px)] px-4 mt-8">
+       <div v-for="link in menu" :key="link.label">
+         <NavItem :item="link"/>
+       </div>
     </div>
   </nav>
 </template>
 <script setup lang="ts">
+import NavItem from "@/app/layouts/navlist/Index.vue";
+
+defineProps<{menu:Array<string>}>();
 </script>

@@ -3,3 +3,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.active.router-link-active {
+    @apply bg-gray-900 p-3 duration-500 rounded transition text-gray-100
+}

@@ -2,7 +2,7 @@
   <div>
     <div class="w-screen h-screen flex overflow-hidden">
       <!--side bar-->
-      <SideBar/>
+      <SideBar :menu="menu"/>
       <!--sidebar collapse-->
       <NavCollapse/>
       <!--top bar-->
@@ -22,12 +22,15 @@
 </template>
 
 <script setup lang="ts">
+import MenuList from "@/app/layouts/menu.ts";
 import SideBar from "@/app/layouts/navbars/SideBar.vue";
 import NavCollapse from "@/app/layouts/navbars/CollapseSideBar.vue";
 
-import {useModalStore} from "@/app/stores/other/modal";
+import { ref } from "vue";
+import { useModalStore } from "@/app/stores/other/modal";
 
 const store = useModalStore()
+const menu = ref(MenuList);
 
 function visible() {
   store.setVisible()

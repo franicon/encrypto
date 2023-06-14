@@ -7,7 +7,7 @@
     </div>
   </div>
   <!--menu-->
-    <div class="md:h-[calc(90vh-50px)] relative md:px-4 md:mt-8 flex md:flex-col justify-between">
+    <div class="md:h-[calc(90vh-50px)] relative md:px-4 md:mt-8 flex items-center md:flex-col justify-between">
     <div class="w-full">
       <div v-for="link in menu" :key="link.label" class="flex md:flex-col">
         <div v-for="item in link.children" :key="item.label">

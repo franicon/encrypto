@@ -5,5 +5,5 @@
 @tailwind utilities;
 
 .active.router-link-active {
-    @apply bg-gray-100 p-3 duration-500 rounded transition text-gray-800
+    @apply bg-gray-100 md:p-3 duration-500 rounded transition text-gray-800
 }

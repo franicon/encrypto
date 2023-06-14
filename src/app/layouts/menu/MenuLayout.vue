@@ -10,11 +10,6 @@
            <NavItem :item="item"/>
          </div>
        </div>
-<!--       <div v-for="link in others" :key="link.label" class="">-->
-<!--         <div v-for="item in link.children" :key="item.label">-->
-<!--           <NavItem :item="item"/>-->
-<!--         </div>-->
-<!--       </div>-->
    </div>
 </template>
 

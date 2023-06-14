@@ -1,5 +1,5 @@
 <template>
-  <nav class="flex 2xl:hidden">
+  <nav>
     <div class="w-full">
       <Sidebar v-model:visible="collapseBar">
         <MainLayout :menu="menu" :others="others"/>
@@ -20,4 +20,11 @@ const { collapseBar } = storeToRefs(store)
 
 defineProps<{menu:Array<string>, others: Array<string>}>();
 </script>
+<style>
+@media (max-width: 767px) {
+  .p-sidebar-visible {
+    display: none !important;
+  }
+}
+</style>
 

@@ -9,8 +9,9 @@
 }
 
 .navbar {
-    @apply justify-self-center md:space-x-4 space-y-3 md:space-y-0 flex md:flex-row flex-col items-center text-gray-400 md:mb-4 py-6 md:p-3 active
+    @apply md:space-x-4 space-y-3 md:space-y-0 flex md:flex-row flex-col items-center text-gray-400 md:mb-4 py-6 md:p-3 active
 }
+
 .main-layout {
-    @apply md:h-[calc(90vh-50px)]  md:px-4 md:mt-8 flex items-center md:flex-col justify-center md:justify-between
+    @apply md:h-[calc(90vh-50px)] w-full md:px-4 md:mt-8 flex md:flex-col justify-center md:justify-between
 }

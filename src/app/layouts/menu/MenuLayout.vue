@@ -4,17 +4,17 @@
        <div class="font-bold text-3xl text-gray-950">encrypto</div>
    </div>
    <!--menu-->
-   <div class="flex  justify-center space-x-10 flex-wrap">
-       <div v-for="link in menu" :key="link.label" class="space-x-10 flex md:flex-col">
+   <div class="main-layout">
+       <div v-for="link in menu" :key="link.label" class="">
          <div v-for="item in link.children" :key="item.label" >
            <NavItem :item="item"/>
          </div>
        </div>
-       <div v-for="link in others" :key="link.label" class="space-x-10 flex md:flex-col">
-         <div v-for="item in link.children" :key="item.label">
-           <NavItem :item="item"/>
-         </div>
-       </div>
+<!--       <div v-for="link in others" :key="link.label" class="">-->
+<!--         <div v-for="item in link.children" :key="item.label">-->
+<!--           <NavItem :item="item"/>-->
+<!--         </div>-->
+<!--       </div>-->
    </div>
 </template>
 

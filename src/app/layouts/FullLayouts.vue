@@ -2,28 +2,9 @@
   <div>
     <div class="w-screen h-screen flex overflow-hidden">
       <!--side bar-->
-      <nav class="hidden 2xl:flex 2xl:flex-col w-[400px] h-full bg-white border-r ">
-        <div class="w-full px-4 py-8">
-          <div class="font-semibold text-3xl">Encrypto</div>
-        </div>
-        <!--menu-->
-        <div class="h-[calc(90vh-50px)] px-4">
-          <div class="">menu</div>
-        </div>
-      </nav>
-      <nav class="flex 2xl:hidden">
-        <div class="w-full ">
-          <Sidebar v-model:visible="visible">
-            <div class="w-full px-4 pb-8">
-              <div class="font-semibold text-3xl">Encrypto</div>
-            </div>
-            <!--menu-->
-            <div class="h-[calc(90vh-50px)] px-4">
-              <div class="">menu</div>
-            </div>
-          </Sidebar>
-        </div>
-      </nav>
+      <SideBar/>
+      <!--sidebar collapse-->
+      <NavCollapse :show="visible"/>
       <!--top bar-->
       <div class="w-full h-full p-8">
         <div class="flex 2xl:hidden">
@@ -40,7 +21,9 @@
 </template>
 
 <script setup lang="ts">
-import Sidebar from 'primevue/sidebar';
+import SideBar from "@/app/layouts/SideBar.vue";
+import NavCollapse from "@/app/layouts/NavCollapse/Index.vue";
+
 import {ref} from "vue";
 
 const visible = ref(false);

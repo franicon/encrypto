@@ -17,10 +17,6 @@ const navList: menu[] = [
                 label: 'Support',
                 icon: 'pi pi-phone',
             },
-            {
-                label: 'Notification',
-                icon: 'pi pi-bell',
-            }
         ]
     }
 ]

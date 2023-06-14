@@ -18,7 +18,7 @@ const navList: menu[] = [
             },
             {
                 label: 'Trade',
-                icon: 'pi pi-chart-line',
+                icon: 'pi pi-dollar',
                 to: '/trade'
             },
             {

@@ -2,8 +2,8 @@
   <nav class="hidden 2xl:flex 2xl:flex-col w-[400px] h-full bg-white border-r px-5">
     <!--side bar-->
     <div class="w-full px-4 py-8">
+      <!--Logo-->
       <div class=" flex items-center space-x-4 mx-auto">
-<!--        <img src="public/logo.svg" class="flex h-12" alt="logo">-->
         <div class="font-bold text-3xl">encrypto</div>
       </div>
     </div>
@@ -29,5 +29,5 @@
 <script setup lang="ts">
 import NavItem from "@/app/layouts/navlist/Index.vue";
 
-defineProps<{menu:Array<string>, others: Array<string>}>();
+defineProps<{ menu: Array<string>, others: Array<string> }>();
 </script>

@@ -1,8 +1,8 @@
 <template>
   <div class="py-3 px-8 flex justify-between items-center">
     <!--sidebar toggle-->
-    <div class="flex items-center space-x-6">
-      <div class="flex 2xl:hidden">
+    <div class="flex items-center space-x-0 lg:space-x-6 2xl:space-x-0">
+      <div class=" hidden md:flex 2xl:hidden">
         <i class="pi pi-align-right text-black cursor-pointer hover:text-gray-600" style="font-size: 1.8rem"
            @click="visible"></i>
       </div>

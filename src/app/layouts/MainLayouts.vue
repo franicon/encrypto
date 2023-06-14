@@ -9,6 +9,7 @@
       <NavCollapse :menu="menuList" :others="others"/>
       <!--top-->
       <div class="w-full h-full">
+        <MobileNavBar :menu="menuList" :others="others"/>
         <!--top nav-->
         <TopBar/>
         <!--main-->
@@ -26,6 +27,7 @@ import otherList from "@/app/layouts/menu/@sub-menu";
 
 import TopBar from "@/app/layouts/navbars/TopBar.vue";
 import SideBar from "@/app/layouts/navbars/desktop/SideBar.vue";
+import MobileNavBar from "@/app/layouts/navbars/mobile/MobileNavBar.vue"
 import NavCollapse from "@/app/layouts/navbars/desktop/CollapseSideBar.vue";
 
 import {ref} from "vue";

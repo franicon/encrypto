@@ -3,13 +3,13 @@
     <div class="w-screen h-screen flex overflow-hidden">
       <!--side-->
      <div class="md:hidden xl:flex">
-       <SideBar :menu="menuList" :others="others"/>
+       <SideBar :menu="menuList"/>
      </div>
       <!--sidebar collapse-->
-      <NavCollapse :menu="menuList" :others="others"/>
+      <NavCollapse :menu="menuList"/>
       <!--top-->
       <div class="w-full h-full">
-        <MobileNavBar :menu="menuList" :others="others"/>
+        <MobileNavBar :menu="menuList" />
         <!--top nav-->
         <TopBar/>
         <!--main-->
@@ -23,7 +23,6 @@
 
 <script setup lang="ts">
 import navList from "@/app/layouts/menu/@menu.ts";
-import otherList from "@/app/layouts/menu/@sub-menu";
 
 import TopBar from "@/app/layouts/navbars/TopBar.vue";
 import SideBar from "@/app/layouts/navbars/desktop/SideBar.vue";
@@ -33,7 +32,6 @@ import NavCollapse from "@/app/layouts/navbars/desktop/CollapseSideBar.vue";
 import {ref} from "vue";
 
 const menuList = ref(navList);
-const others = ref(otherList);
 
 
 </script>

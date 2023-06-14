@@ -2,7 +2,7 @@
   <nav>
     <div class="w-full">
       <Sidebar v-model:visible="collapseBar">
-        <MainLayout :menu="menu" :others="others"/>
+        <MainLayout :menu="menu"/>
       </Sidebar>
     </div>
   </nav>
@@ -18,7 +18,7 @@ import { useModalStore } from "@/app/stores/other/modal";
 const store = useModalStore()
 const { collapseBar } = storeToRefs(store)
 
-defineProps<{menu:Array<string>, others: Array<string>}>();
+defineProps<{menu:Array<string>}>();
 </script>
 <style>
 @media (max-width: 767px) {

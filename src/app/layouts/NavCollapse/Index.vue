@@ -1,7 +1,7 @@
 <template>
   <nav class="flex 2xl:hidden">
     <div class="w-full ">
-      <Sidebar v-model:visible="show">
+      <Sidebar v-model:visible="collapseBar">
         <div class="w-full px-4 pb-8">
           <div class="font-semibold text-3xl">Encrypto</div>
         </div>
@@ -17,8 +17,11 @@
 <script  setup lang="ts">
 import Sidebar from 'primevue/sidebar';
 
- defineProps<{
-  show: boolean
-}>()
+import { storeToRefs } from "pinia";
+import { useModalStore } from "@/app/stores/other/modal";
+
+const store = useModalStore()
+const { collapseBar } = storeToRefs(store)
+
 </script>
 

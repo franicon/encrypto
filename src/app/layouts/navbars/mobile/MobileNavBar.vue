@@ -1,6 +1,6 @@
 <template>
   <nav class="fixed w-full bottom-0 md:hidden z-10">
-    <div class="w-full relative flex justify-center bg-gray-100 items-center">
+    <div class="w-[100vw] bg-gray-100 relative flex">
       <MainLayout :menu="menu" :others="others"/>
     </div>
   </nav>

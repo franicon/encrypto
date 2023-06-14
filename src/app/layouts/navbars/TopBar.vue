@@ -1,5 +1,5 @@
 <template>
-  <div class="border-b py-3 px-8 flex justify-between items-center">
+  <div class="py-3 px-8 flex justify-between items-center">
     <!--sidebar toggle-->
     <div class="flex items-center space-x-6">
       <div class="flex 2xl:hidden">
@@ -41,7 +41,7 @@
 import Menu from 'primevue/menu';
 import Avatar from 'primevue/avatar';
 
-import { onMounted, ref } from "vue";
+import {watch, ref, onMounted} from "vue";
 import { useRoute } from "vue-router";
 import { useModalStore } from "@/app/stores/other/modal";
 
@@ -65,12 +65,10 @@ const visible = () => {
   store.setVisible();
 };
 
-const getRouteName = () => {
+watch(() => route.name, () => {
   title.value = route.name
-
-}
-
-onMounted(() =>{
+});
+onMounted(() => {
   title.value = route.name
 })
 </script>

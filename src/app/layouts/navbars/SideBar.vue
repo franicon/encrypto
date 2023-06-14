@@ -1,10 +1,10 @@
 <template>
   <nav class="hidden 2xl:flex 2xl:flex-col w-[400px] h-full bg-white border-r px-5">
     <!--side bar-->
-    <div class="w-full px-4 py-8">
+    <div class="w-full px-4 pt-3 pb-10">
       <!--Logo-->
       <div class=" flex items-center space-x-4 mx-auto">
-        <div class="font-bold text-3xl">encrypto</div>
+        <div class="font-bold text-3xl text-gray-950">encrypto</div>
       </div>
     </div>
     <!--menu-->

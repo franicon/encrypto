@@ -5,6 +5,12 @@
 </template>
 <script setup lang="ts">
 import MainLayout from "@/app/layouts/menu/MenuLayout.vue"
-import menuType from "@/app/layouts/menu/@menu.ts"
-defineProps<{ menu: Array<menuType[]> }>();
+export interface menuType {
+  label: string;
+  icon: string;
+  to?: string;
+  children?: menu[]
+}
+
+defineProps<{ menu: menuType }>();
 </script>

@@ -7,8 +7,15 @@
 </template>
 
 <script setup lang="ts">
-import MainLayout from "@/app/layouts/menu/MenuLayout.vue"
-defineProps<{menu:Array<string>}>();
+import MainLayout from "@/app/layouts/menu/MenuLayout.vue";
+export interface menuType {
+  label: string;
+  icon: string;
+  to?: string;
+  children?: menu[]
+}
+
+defineProps<{ menu: menuType }>();
 
 </script>
 

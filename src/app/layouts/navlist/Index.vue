@@ -1,8 +1,5 @@
 <template>
     <div class="">
-      <Sidebar v-model:visible="visible">
-        {{item.label}}
-      </Sidebar>
     <template v-if="item.to">
       <router-link :to="`${item.to}`" class="navbar">
         <div :class="item.icon + ' size'"></div>
@@ -20,9 +17,10 @@
 <script  setup lang="ts">
 import {useModalStore} from "@/app/stores/other/modal";
 
-defineProps<{item: Object}>()
+defineProps<{item: menu}>()
 import Sidebar from 'primevue/sidebar';
 import { ref } from "vue";
+import type {menu} from "@/app/layouts/menu/@menu";
 
 const position = ref('center');
 const visible = ref(false);

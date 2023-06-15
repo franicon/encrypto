@@ -22,7 +22,7 @@
 </template>
 
 <script setup lang="ts">
-import navList from "@/app/layouts/menu/@menu.ts";
+import navList from "@/app/layouts/menu/@menu";
 
 import TopBar from "@/app/layouts/navbars/TopBar.vue";
 import SideBar from "@/app/layouts/navbars/desktop/SideBar.vue";

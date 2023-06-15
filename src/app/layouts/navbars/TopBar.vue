@@ -48,7 +48,7 @@ import { useModalStore } from "@/app/stores/other/modal";
 const route = useRoute();
 const store = useModalStore();
 
-const title = ref<string>();
+const title = ref<string>('dashboard');
 const menu = ref();
 const items = ref([
   { separator: true },
@@ -57,7 +57,7 @@ const items = ref([
   { separator: true }
 ]);
 
-const toggle = (event) => {
+const toggle = (event: string) => {
   menu.value.toggle(event);
 };
 

@@ -17,7 +17,14 @@
 
 <script setup lang="ts">
 import NavItem from "@/app/layouts/navlist/Index.vue";
-defineProps<{ menu: Array<string>}>();
+export interface menuType {
+  label: string;
+  icon: string;
+  to?: string;
+  children?: menu[]
+}
+
+defineProps<{ menu: menuType }>();
 </script>
 
 <style scoped>

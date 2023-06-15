@@ -5,10 +5,12 @@
    </div>
    <!--menu-->
    <div class="main-layout">
-       <div v-for="link in menu" :key="link.label" class="flex md:grid">
-         <div v-for="item in link.children" :key="item.label">
-           <NavItem :item="item"/>
-         </div>
+       <div v-for="link in menu" :key="link.label" class="grid grid-cols-7 xs:gap-8 sm:gap-16 gap-10 grid-cols-1 md:gap-0 md:grid">
+        <template v-if="link.label === 'mobile'">
+          <div v-for="item in link.children" :key="item.label">
+            <NavItem :item="item"/>
+          </div>
+        </template>
        </div>
    </div>
 </template>

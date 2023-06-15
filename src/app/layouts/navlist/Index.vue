@@ -19,8 +19,15 @@ defineProps<{item: Object}>()
 </script>
 
 <style>
-  .size{
-    font-size: 1.6rem;
+  @media (max-width: 768px) {
+    .size{
+      font-size: 1.2rem;
+    }
+  }
+  @media (max-width: 468px) {
+    .size{
+      font-size: 1rem;
+    }
   }
 </style>
 

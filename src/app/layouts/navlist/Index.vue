@@ -1,7 +1,8 @@
 <template>
     <div class="">
-      <Dialog v-model:visible="visible" :position="position" modal :header="item.label" :style="{ width: '20vw', top: '1px' }">
-      </Dialog>
+      <Sidebar v-model:visible="visible">
+        {{item.label}}
+      </Sidebar>
     <template v-if="item.to">
       <router-link :to="`${item.to}`" class="navbar">
         <div :class="item.icon + ' size'"></div>
@@ -9,7 +10,7 @@
       </router-link>
     </template>
    <template v-else>
-     <div class="navbar cursor-pointer"  @click="openPosition('left')">
+     <div class="navbar cursor-pointer"  @click="openPosition">
        <div :class="item.icon + ' size'"></div>
        <div class="md:text-[15px] hidden md:flex text-[12px] font-semibold ">{{ item.label }}</div>
      </div>
@@ -17,16 +18,19 @@
   </div>
 </template>
 <script  setup lang="ts">
+import {useModalStore} from "@/app/stores/other/modal";
+
 defineProps<{item: Object}>()
-import Dialog from 'primevue/dialog';
+import Sidebar from 'primevue/sidebar';
 import { ref } from "vue";
 
 const position = ref('center');
 const visible = ref(false);
+const store = useModalStore();
 
-const openPosition = (pos) => {
-  position.value = pos;
+const openPosition = () => {
   visible.value = true;
+  store.setVisible();
 }
 </script>
 

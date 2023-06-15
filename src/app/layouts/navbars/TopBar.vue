@@ -12,7 +12,7 @@
     <div class="flex">
       <Avatar icon="pi pi-bell" class="mr-3" shape="circle"/>
       <div class="cursor-pointer card flex justify-content-center" @click="toggle" aria-haspopup="true" aria-controls="overlay_menu">
-        <Avatar image="/public/avata.png" shape="circle"/>
+        <Avatar image="/avata.png" shape="circle"/>
         <Menu ref="menu" id="overlay_menu" :model="items" :popup="true">
           <template #start>
             <div class="w-full p-link flex items-center text-color hover:surface-200 ">

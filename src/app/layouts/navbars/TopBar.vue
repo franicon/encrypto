@@ -15,7 +15,7 @@
         <Avatar image="/avata.png" shape="circle"/>
         <Menu ref="menu" id="overlay_menu" :model="items" :popup="true">
           <template #start>
-            <div class="w-full p-link flex items-center text-color hover:surface-200 ">
+            <div class="w-full p-link flex items-center text-color hover:surface-200 mb-10">
               <Avatar image="/public/avata.png" class="mx-2" shape="circle" />
               <div class="flex flex-col">
                 <span class="font-bold text-sm">Yomi Aluko</span>
@@ -23,14 +23,14 @@
               </div>
             </div>
           </template>
-          <template #end>
-            <div class="w-full p-link flex items-center p-2 pl-3 text-color hover:surface-200 border-noround">
-              <div class="px-6 py-2">
-                <i class="pi pi-sign-out"/>
-                <span class="ml-2">Log Out</span>
-              </div>
-            </div>
-          </template>
+<!--          <template #end>-->
+<!--            <div class="w-full p-link flex items-center p-2 pl-3 text-color hover:surface-200 border-noround">-->
+<!--              <div class="px-6 py-2">-->
+<!--                <i class="pi pi-sign-out"/>-->
+<!--                <span class="ml-2">Log Out</span>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </template>-->
         </Menu>
       </div>
     </div>
@@ -52,8 +52,9 @@ const title = ref<any>('Dashboard');
 const menu = ref();
 const items = ref([
   { separator: true },
-  { label: 'Profile', icon: 'pi pi-fw pi-user' },
-  { label: 'Settings', icon: 'pi pi-fw pi-cog' },
+  { label: 'My Profile', icon: 'pi pi-fw pi-user' },
+  { separator: true },
+  { label: 'Account Settings', icon: 'pi pi-fw pi-cog' },
   { separator: true }
 ]);
 

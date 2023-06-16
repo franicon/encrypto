@@ -31,6 +31,6 @@ import NavCollapse from "@/app/layouts/navbars/desktop/CollapseSideBar.vue";
 
 import {ref} from "vue";
 
-const menuList = ref(navList);
+const menuList = ref<typeof navList>(navList);
 </script>
 

@@ -18,14 +18,7 @@ import { useModalStore } from "@/app/stores/other/modal";
 const store = useModalStore()
 const { collapseBar } = storeToRefs(store)
 
-export interface menuType {
-  label: string;
-  icon: string;
-  to?: string;
-  children?: menu[]
-}
-
-defineProps<{ menu: menuType }>();
+defineProps<{ menu }>();
 </script>
 <style>
 @media (max-width: 767px) {

@@ -18,11 +18,9 @@
 import {useModalStore} from "@/app/stores/other/modal";
 
 defineProps<{item: menu}>()
-import Sidebar from 'primevue/sidebar';
 import { ref } from "vue";
 import type {menu} from "@/app/layouts/menu/@menu";
 
-const position = ref('center');
 const visible = ref(false);
 const store = useModalStore();
 

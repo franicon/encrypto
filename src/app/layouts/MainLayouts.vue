@@ -29,8 +29,8 @@ import SideBar from "@/app/layouts/navbars/desktop/SideBar.vue";
 import MobileNavBar from "@/app/layouts/navbars/mobile/MobileNavBar.vue"
 import NavCollapse from "@/app/layouts/navbars/desktop/CollapseSideBar.vue";
 
-import {ref} from "vue";
+import {ref, shallowRef} from "vue";
 
-const menuList = ref<typeof navList>(navList);
+const menuList = shallowRef(navList);
 </script>
 

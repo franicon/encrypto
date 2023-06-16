@@ -10,6 +10,8 @@
 
 <script  setup lang="ts">
 import Sidebar from 'primevue/sidebar';
+import navList from "@/app/layouts/menu/@menu";
+
 import MainLayout from "@/app/layouts/menu/MenuLayout.vue"
 
 import { storeToRefs } from "pinia";
@@ -18,7 +20,7 @@ import { useModalStore } from "@/app/stores/other/modal";
 const store = useModalStore()
 const { collapseBar } = storeToRefs(store)
 
-defineProps<{ menu }>();
+defineProps<{ menu: typeof navList}>();
 </script>
 <style>
 @media (max-width: 767px) {

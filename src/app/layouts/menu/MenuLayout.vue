@@ -17,8 +17,9 @@
 
 <script setup lang="ts">
 import NavItem from "@/app/layouts/navlist/Index.vue";
+import navList from "@/app/layouts/menu/@menu";
 
-defineProps<{ menu }>();
+defineProps<{ menu:typeof navList}>();
 </script>
 
 <style scoped>

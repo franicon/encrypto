@@ -7,8 +7,10 @@
 </template>
 
 <script setup lang="ts">
+import navList from "@/app/layouts/menu/@menu";
 import MainLayout from "@/app/layouts/menu/MenuLayout.vue";
-defineProps<{ menu }>();
+
+defineProps<{ menu: typeof navList}>();
 
 </script>
 

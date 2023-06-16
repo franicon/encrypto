@@ -7,6 +7,5 @@
 import navList from "@/app/layouts/menu/@menu";
 import MainLayout from "@/app/layouts/menu/MenuLayout.vue"
 
-
 defineProps<{ menu: typeof navList }>();
 </script>

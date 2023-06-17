@@ -17,8 +17,8 @@ const navList: menu[] = [
                 to: '/dashboard',
             },
             {
-                label: 'Trade',
-                icon: 'pi pi-dollar',
+                label: 'Transactions',
+                icon: 'pi pi-arrow-right-arrow-left',
                 to: '/trade'
             },
             {

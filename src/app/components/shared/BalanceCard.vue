@@ -6,17 +6,15 @@
         <p class="text-gray-400 font-semibold text-xs pb-1">Total Assets</p>
         <div class="flex items-center">
           <h1 class="text-gray-100 font-semibold text-xl pb-1">5000.01</h1>
-          <Dropdown v-model="selectedCountry" value="BTC" :options="countries" optionLabel="code" >
-            <span class="p-dropdown-label p-inputtext" tabindex="0" role="combobox" aria-haspopup="listbox" aria-expanded="false" aria-controls="pv_id_1_list" aria-disabled="true" aria-label="BTC">BTC</span>
-            <template #option="slotProps">
-              <div>
-                <div>{{ slotProps.option.code }}</div>
-              </div>
+          <Dropdown v-model="selectedAsset" :options="assets" optionLabel="code">
+            <template #value="slotProps">
+              <span v-if="!slotProps.value.code" :options="selectedAsset.code" class="" aria-label="ETH" aria-labelledby="ETH">{{selectedAsset}}</span>
+              <span v-else>{{slotProps.value.code}}</span>
             </template>
           </Dropdown>
         </div>
 
-        <p class="font-semibold text-sm"><span class="text-gray-400">0.00004</span> <small class="text-gray-500">BTC</small></p>
+        <p class="font-semibold text-sm"><span class="text-gray-400">0.00004</span> <small class="text-gray-500">{{selectedAsset.code}}</small></p>
       </div>
       <i class="pi pi-wallet text-gray-600" style="font-size: 4rem"></i>
     </div>
@@ -24,19 +22,20 @@
 </template>
 
 <script setup lang="ts">
-import {ref} from "vue";
+import { ref } from "vue";
 import Dropdown from 'primevue/dropdown';
 
 
-const selectedCountry = ref<string>();
-const countries = ref<Array<Object>[]>([
-  { name: 'Australia', code: 'BTC' },
-  { name: 'Brazil', code: 'ETH' },
-  { name: 'China', code: 'BNB' },
-  { name: 'Egypt', code: 'CE' },
-  { name: 'France', code: 'SOL' },
-  { name: 'Germany', code: 'DOG' },
+const selectedAsset = ref<string>('ETH');
+const assets = ref<Array<Object>[]>([
+  { name: 'bitcoin', code: 'BTC' },
+  { name: 'ethereum', code: 'ETH' },
+  { name: 'Binance', code: 'BNB' },
+  { name: 'Celo', code: 'CEL' },
+  { name: 'Solana', code: 'SOL' },
+  { name: 'DogeCoin', code: 'DOG' },
 ]);
+
 </script>
 
 <style>
@@ -69,5 +68,8 @@ const countries = ref<Array<Object>[]>([
   font-size: 13px;
   padding-right: 5px;
   color: #d1d1d1;
+}
+p-dropdown-label p-inputtext{
+  display: none;
 }
 </style>

@@ -27,6 +27,11 @@ const navList: menu[] = [
                 to: '/wallet'
             },
             {
+                label: 'Live Pricing',
+                icon: 'pi pi-chart-bar',
+                to: '/pricing'
+            },
+            {
                 label: 'Action',
                 icon: 'pi pi-sliders-h',
                 to: '/actions'
@@ -36,12 +41,6 @@ const navList: menu[] = [
                 icon: 'pi pi-images',
                 to: '/nft'
             },
-            {
-                label: 'Live Pricing',
-                icon: 'pi pi-images',
-                to: '/pricing'
-            },
-
         ]
     },
 ]

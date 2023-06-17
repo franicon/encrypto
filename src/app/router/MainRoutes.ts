@@ -31,6 +31,11 @@ const MainRoutes = {
             name: 'nft',
             component: () => import('@/app/views/pages/main/Nft.vue'),
         },
+        {
+            path: '/pricing',
+            name: 'live pricing',
+            component: () => import('@/app/views/pages/main/Pricing.vue'),
+        },
     ]
 }
 

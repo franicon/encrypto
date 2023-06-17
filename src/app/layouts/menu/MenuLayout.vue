@@ -13,10 +13,10 @@
           </div>
         </template>
        </div>
-     <div class="bg-gray-200 p-4 space-y-2 hidden md:flex md:flex-col">
-       <p class="text-xs font-bold text-gray-700">Encrypto - Crypto Dashboard &copy;</p>
-       <p class="text-xs text-gray-500">2023 All Right Reserved</p>
-       <p class="text-xs text-gray-500 pt-4">Made with ❤ by Abayomi</p>
+     <div class="bg-gray-200 bg-opacity-20 p-4 space-y-2 hidden md:flex md:flex-col">
+       <p class="text-xs font-bold text-gray-300">Encrypto - Crypto Dashboard &copy;</p>
+       <p class="text-xs text-gray-400">2023 All Right Reserved</p>
+       <p class="text-xs text-gray-400 pt-4">Made with ❤ by Abayomi</p>
      </div>
    </div>
 </template>
@@ -36,17 +36,17 @@ defineProps<{ menu:typeof   navList}>();
 }
 @media (min-width: 300px) {
   .mid-gap {
-    grid-column-gap: 1.8rem;
+    grid-column-gap: 2rem;
   }
 }
 @media (min-width: 400px) {
   .mid-gap {
-    grid-column-gap: 2.5rem;
+    grid-column-gap: 3.7rem;
   }
 }
 @media (min-width: 600px) {
   .mid-gap {
-    grid-column-gap: 4rem;
+    grid-column-gap: 4.5rem;
   }
 }
 @media (min-width: 700px) {

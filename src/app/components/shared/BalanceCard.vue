@@ -28,8 +28,8 @@ import {ref} from "vue";
 import Dropdown from 'primevue/dropdown';
 
 
-const selectedCountry = ref();
-const countries = ref([
+const selectedCountry = ref<string>();
+const countries = ref<Array<Object>[]>([
   { name: 'Australia', code: 'BTC' },
   { name: 'Brazil', code: 'ETH' },
   { name: 'China', code: 'BNB' },

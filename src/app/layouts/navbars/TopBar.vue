@@ -1,5 +1,5 @@
 <template>
-  <div class=" pt-5 px-8 flex justify-between items-center">
+  <div class=" pt-5 px-8 flex justify-between items-center border-b border-gray-900 pb-9">
     <!--sidebar toggle-->
     <div class="flex items-center space-x-0 md:space-x-6 2xl:space-x-0">
       <div class="hidden md:flex 2xl:hidden">

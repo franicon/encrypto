@@ -1,7 +1,7 @@
 <template>
 
    <!--logo-->
-   <div class="w-full px-6 pt-3 pb-10 hidden md:flex border-b">
+   <div class="w-full px-6   hidden md:flex md:items-center h-[90px] border-b">
        <div class="font-bold text-3xl text-gray-50">encrypto</div>
    </div>
    <!--menu-->

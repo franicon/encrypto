@@ -1,5 +1,5 @@
 <template>
-  <nav class="hidden 2xl:flex 2xl:flex-col w-[300px] h-full bg-white border-r px-5">
+  <nav class="hidden 2xl:flex 2xl:flex-col w-[300px] h-full bg-gray-950 border-r ">
     <MainLayout :menu="menu"/>
   </nav>
 </template>

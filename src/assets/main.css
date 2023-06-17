@@ -5,7 +5,7 @@
 @tailwind utilities;
 
 .active.router-link-active {
-    @apply bg-gray-100 md:p-3 duration-500 rounded transition text-gray-800
+    @apply bg-gray-100 bg-opacity-5 md:p-3 border-l-2 border-gray-600 duration-500  transition text-gray-100
 }
 
 .navbar {

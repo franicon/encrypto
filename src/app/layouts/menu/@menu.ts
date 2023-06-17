@@ -32,19 +32,14 @@ const navList: menu[] = [
                 to: '/actions'
             },
             {
-                label: 'Nft',
+                label: 'NFTs',
                 icon: 'pi pi-images',
                 to: '/nft'
             },
             {
-                label: 'Settings',
-                icon: 'pi pi-cog',
-                to: '/'
-            },
-            {
-                label: 'Support',
-                icon: 'pi pi-phone',
-                to: '/actions'
+                label: 'Live Pricing',
+                icon: 'pi pi-images',
+                to: '/pricing'
             },
 
         ]

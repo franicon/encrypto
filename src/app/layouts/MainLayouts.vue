@@ -13,7 +13,7 @@
         <!--top nav-->
         <TopBar/>
         <!--main-->
-        <section class="h-[calc(100vh-50px)] px-5 relative overflow-x-hidden ">
+        <section class="h-[calc(100vh-50px)] px-8 relative overflow-x-hidden pt-6 ">
           <RouterView/>
         </section>
       </div>
@@ -29,7 +29,7 @@ import SideBar from "@/app/layouts/navbars/desktop/SideBar.vue";
 import MobileNavBar from "@/app/layouts/navbars/mobile/MobileNavBar.vue"
 import NavCollapse from "@/app/layouts/navbars/desktop/CollapseSideBar.vue";
 
-import {ref, shallowRef} from "vue";
+import {shallowRef} from "vue";
 
 const menuList = shallowRef(navList);
 </script>

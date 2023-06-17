@@ -1,5 +1,5 @@
 <template>
-  <article class="w-[350px]">
+  <article class="md:w-[350px] w-full">
     <div class="text-gray-700 text-xl font-semibold"><i class="pi pi-wallet"></i><span class="pl-2">Wallet Balance</span></div>
     <div class="mt-3 px-4 py-5 bg-gray-900 rounded flex justify-between items-center">
       <div>

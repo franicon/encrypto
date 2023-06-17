@@ -13,7 +13,3 @@ import MainLayout from "@/app/layouts/menu/MenuLayout.vue";
 defineProps<{ menu: typeof navList}>();
 
 </script>
-
-<style scoped>
-
-</style>

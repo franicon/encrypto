@@ -30,10 +30,8 @@ import Avatar from 'primevue/avatar';
 import OverlayPanel from 'primevue/overlaypanel';
 
 const op = ref();
-const products = ref();
-const selectedProduct = ref();
 
-const toggle = (event) => {
+const toggle = (event: Event) => {
   op.value.toggle(event);
 };
 

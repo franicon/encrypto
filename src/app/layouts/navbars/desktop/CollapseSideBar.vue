@@ -23,6 +23,9 @@ const { collapseBar } = storeToRefs(store)
 defineProps<{ menu: typeof navList}>();
 </script>
 <style>
+.p-sidebar {
+  background-color: rgb(3 7 18) !important;
+}
 @media (max-width: 767px) {
   .p-sidebar-visible {
     display: none !important;

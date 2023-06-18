@@ -7,13 +7,14 @@
           <OwnedAssets/>
         </div>
       </div>
-      <div class="col-span-2 ">
+      <div class="col-span-2">
         <div class="border p-4 grid xl:grid-cols-2 md:grid-cols-2 grid-cols-1 gap-4 w-full">
           <Chart/>
           <TopCrypto/>
         </div>
       </div>
       <div class="">
+          <OwnedAssets/>
       </div>
     </div>
   </section>

@@ -1,8 +1,8 @@
 <template>
-  <article class=" w-full">
+  <article class="w-full">
     <div class="text-gray-700 text-xl font-semibold"><i class="pi pi-wallet"></i><span class="pl-2">Wallet Balance</span></div>
     <div class="mt-3 px-4 py-5 bg-gray-900 rounded flex justify-between items-center">
-      <div >
+      <div>
         <p class="text-gray-400 font-semibold text-xs pb-1">Total Assets</p>
         <div class="flex items-center">
           <div class="text-gray-100 font-semibold text-xl">{{ selectedAsset.fiat }}.00</div>

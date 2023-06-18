@@ -1,14 +1,11 @@
 <template>
   <section class="mb-10 w-full">
-    <div class="flex md:flex-row flex-cols flex-grow gap-6">
-      <div class="w-[25%]"><BalanceCard/></div>
-      <div class="border p-4 grid xl:grid-cols-2 grid-cols-1 gap-4 w-[50%]">
-        <BalanceCard/>
-        <BalanceCard/>
-        <BalanceCard/>
-        <BalanceCard/>
+    <div class="flex xl:flex-row flex-col gap-6">
+      <div class="xl:w-[25%] w-full"><BalanceCard/></div>
+      <div class="border p-4 grid xl:grid-cols-2 grid-cols-1 gap-4 xl:w-[50%] w-full">
+        <Chart/>
       </div>
-      <div class="w-[25%]">
+      <div class="xl:w-[25%] w-full">
         <BalanceCard/>
       </div>
     </div>
@@ -17,6 +14,7 @@
 
 <script setup lang="ts">
 import BalanceCard from "@/app/components/shared/BalanceCard.vue"
+import Chart from "@/app/components/Chart.vue"
 </script>
 
 <style scoped>

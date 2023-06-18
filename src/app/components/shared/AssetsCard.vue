@@ -6,13 +6,13 @@
        <div class="border px-3 py-2 rounded bg-gray-50"><img class="w-5 h-5"  :src="'/coin/' + asset.img" alt="asset.code"></div>
        <div>
          <div class="text-sm font-semibold">{{asset.name}}</div>
-         <div class="text-xs font-semibold">{{asset.code}}</div>
+         <div class="text-xs font-normal">{{asset.code}}</div>
        </div>
      </div>
      <div>
        <div class="text-end">
          <div class="text-sm font-semibold">{{asset.asset_value}}</div>
-         <div class="text-xs font-semibold text-emerald-600">{{ asset.fiat_value }}</div>
+         <div class="text-xs font-semibold text-emerald-600">{{ asset.fiat_value }} USD</div>
        </div>
      </div>
    </div>

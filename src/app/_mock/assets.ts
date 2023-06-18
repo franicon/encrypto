@@ -1,6 +1,6 @@
-import { assets } from "@/types";
+import { assets, ownedAssets } from "@/types";
 
-const topsAssets: assets[] = [
+export const topsAssets: assets[] = [
     {
         img: 'btc.svg',
         code: 'BTC',
@@ -58,4 +58,13 @@ const topsAssets: assets[] = [
         rate: '26,481.48',
     }
 ]
-export default topsAssets;
+
+export const owned: ownedAssets[] = [
+    {
+        img: 'btc.svg',
+        code: 'BTC',
+        asset_value: '0.00023',
+        name: 'Bitcoin',
+        fiat_value: '20,000',
+    },
+]

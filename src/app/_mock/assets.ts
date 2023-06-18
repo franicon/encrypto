@@ -1,4 +1,4 @@
-import {assets} from "@/types";
+import { assets } from "@/types";
 
 const topsAssets: assets[] = [
     {

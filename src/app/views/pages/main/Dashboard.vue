@@ -1,12 +1,14 @@
 <template>
   <section class="mb-10 w-full">
-    <div class="flex xl:flex-row flex-col gap-6">
-      <div class="xl:w-[25%] w-full"><BalanceCard/></div>
-      <div class="border p-4 grid xl:grid-cols-2 grid-cols-1 gap-4 xl:w-[50%] w-full">
-        <Chart/>
-        <TopCrypto/>
+    <div class="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6">
+      <div class=""><BalanceCard/></div>
+      <div class="col-span-2 ">
+        <div class="border p-4 grid xl:grid-cols-2 md:grid-cols-2 grid-cols-1 gap-4 w-full">
+          <Chart/>
+          <TopCrypto/>
+        </div>
       </div>
-      <div class="xl:w-[25%] w-full">
+      <div class="">
         <BalanceCard/>
       </div>
     </div>

@@ -10,8 +10,9 @@
 
 <script setup lang="ts">
 import {ref} from "vue";
-import AssetsCard from "@/app/components/shared/AssetsCard.vue"
-const assets = ref<Array<string>>()
+import topsAssets from "@/app/_mock/assets";
+import AssetsCard from "@/app/components/shared/AssetsCard.vue";
+const assets = ref<Array<string>>(topsAssets);
 </script>
 
 <style scoped>

@@ -1,4 +1,6 @@
-export default assets = [
+import {assets} from "@/types";
+
+const topsAssets: assets[] = [
     {
         img: 'btc.svg',
         code: 'BTC',
@@ -56,3 +58,4 @@ export default assets = [
         rate: '26,481.48',
     }
 ]
+export default topsAssets;

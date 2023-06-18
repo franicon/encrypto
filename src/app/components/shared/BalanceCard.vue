@@ -1,5 +1,5 @@
 <template>
-  <article class="md:w-[350px] w-full">
+  <article class=" w-full">
     <div class="text-gray-700 text-xl font-semibold"><i class="pi pi-wallet"></i><span class="pl-2">Wallet Balance</span></div>
     <div class="mt-3 px-4 py-5 bg-gray-900 rounded flex justify-between items-center">
       <div >
@@ -66,4 +66,9 @@ const selectedAsset = ref<string>(assets.value[1]);
 p-dropdown-label p-inputtext{
   display: none;
 }
+.p-dropdown-panel .p-dropdown-items .p-dropdown-item.p-highlight {
+  color: #121b25;
+  background: rgba(18, 27, 37, 0.22) !important;
+}
+
 </style>

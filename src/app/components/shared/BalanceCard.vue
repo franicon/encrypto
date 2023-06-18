@@ -5,10 +5,11 @@
       <div >
         <p class="text-gray-400 font-semibold text-xs pb-1">Total Assets</p>
         <div class="flex items-center">
-          <h1 class="text-gray-100 font-semibold text-xl pb-1">5000.01</h1>
+          <div class="text-gray-100 font-semibold text-xl">{{ selectedAsset.fiat }}.00</div>
           <Dropdown v-model="selectedAsset" :options="assets" optionLabel="currency"></Dropdown>
         </div>
-        <p class="font-semibold text-sm"><span class="text-gray-400">0.00004</span> <small class="text-gray-500">{{selectedAsset.code}}</small></p>
+        <i class="pi pi-sort-alt text-gray-300"></i>
+        <p class="font-semibold text-sm"><span class="text-gray-400">{{selectedAsset.token}}</span> <small class="text-gray-500">{{selectedAsset.code}}</small></p>
       </div>
       <i class="pi pi-wallet text-gray-600" style="font-size: 4rem"></i>
     </div>
@@ -19,13 +20,12 @@
 import { ref } from "vue";
 import Dropdown from 'primevue/dropdown';
 
-
 const assets = ref<Array<Object>[]>([
-  { asset_amt:'2000', fiat_amt: '000.003', name: 'bitcoin', code: 'BTC', currency: 'USD', currency_amt: '760.03' },
-  { asset_amt:'2000', fiat_amt: '000.003', name: 'bitcoin', code: 'BTC', currency: 'NGN',  currency_amt: '760.03'},
-  { asset_amt:'2000', fiat_amt: '000.003', name: 'bitcoin', code: 'BTC', currency: 'EUR', currency_amt: '760.03' },
-  { asset_amt:'2000', fiat_amt: '000.003', name: 'bitcoin', code: 'BTC', currency: 'CAD', currency_amt: '760.03' },
-  { asset_amt:'2000', fiat_amt: '000.003', name: 'bitcoin', code: 'BTC', currency: 'AUD', currency_amt: '760.03' },
+  { fiat:'2000', token: '000.003', name: 'bitcoin', code: 'BTC', currency: 'USD', currency_amt: '760.03' },
+  { fiat:'2000', token: '000.003', name: 'bitcoin', code: 'BNB', currency: 'NGN',  currency_amt: '760.03'},
+  { fiat:'2000', token: '000.003', name: 'bitcoin', code: 'CEL', currency: 'EUR', currency_amt: '760.03' },
+  { fiat:'2000', token: '000.003', name: 'bitcoin', code: 'SOL', currency: 'CAD', currency_amt: '760.03' },
+  { fiat:'2000', token: '000.003', name: 'bitcoin', code: 'COD', currency: 'AUD', currency_amt: '760.03' },
 ]);
 
 const selectedAsset = ref<string>(assets.value[1]);

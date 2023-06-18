@@ -8,9 +8,12 @@
         </div>
       </div>
       <div class="col-span-2">
-        <div class="border p-4 grid xl:grid-cols-2 md:grid-cols-2 grid-cols-1 gap-4 w-full">
-          <Chart/>
-          <TopCrypto/>
+        <div class="">
+          <div class="border p-4 grid xl:grid-cols-2 md:grid-cols-2 grid-cols-1 gap-4 w-full">
+            <Chart/>
+            <TopCrypto/>
+          </div>
+          <TransactionHistory/>
         </div>
       </div>
       <div class="">
@@ -25,6 +28,7 @@ import Chart from "@/app/components/Chart.vue";
 import TopCrypto from "@/app/components/TopCreypto.vue";
 import BalanceCard from "@/app/components/shared/BalanceCard.vue";
 import OwnedAssets from "@/app/components/shared/OwnedAssets.vue";
+import TransactionHistory from "@/app/components/TransactionHistory.vue";
 </script>
 
 <style scoped>

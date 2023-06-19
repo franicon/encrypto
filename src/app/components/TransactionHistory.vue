@@ -4,7 +4,6 @@
     </div>
     <div class="mt-3 h-[25rem] overflow-hidden overflow-y-visible">
       <div class="py-4">
-        <AssetsCard :assets="assets"/>
       </div>
     </div>
   </div></template>

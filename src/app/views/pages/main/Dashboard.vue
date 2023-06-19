@@ -18,7 +18,7 @@
         </div>
         <div class="grid xl:grid-cols-2 lg:grid-cols-2 md:grid-cols-2 gap-5 mt-5">
           <div class=""> <TransactionHistory/></div>
-          <div class=""><TopCrypto class=""/></div>
+          <div class=""><ReferalCard/></div>
         </div>
       </div>
       <!--loader & end Crypto-->
@@ -39,6 +39,7 @@
 <script setup lang="ts">
 import Chart from "@/app/components/Chart.vue";
 import TopCrypto from "@/app/components/TopCreypto.vue";
+import ReferalCard from "@/app/components/ReferalCard.vue";
 import BalanceCard from "@/app/components/shared/BalanceCard.vue";
 import OwnedAssets from "@/app/components/shared/OwnedAssets.vue";
 import TransactionHistory from "@/app/components/TransactionHistory.vue";

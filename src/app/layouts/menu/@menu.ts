@@ -36,11 +36,11 @@ const navList: menu[] = [
                 icon: 'pi pi-sliders-h',
                 to: '/actions'
             },
-            {
-                label: 'NFTs',
-                icon: 'pi pi-images',
-                to: '/nft'
-            },
+            // {
+            //     label: 'NFTs',
+            //     icon: 'pi pi-images',
+            //     to: '/nft'
+            // },
         ]
     },
 ]

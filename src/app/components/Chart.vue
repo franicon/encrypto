@@ -1,10 +1,12 @@
 
 <template>
   <div class="card relative">
-    <div class="">
-      <div class="flex w-full justify-end">
-        <button class="bg-gray-950 text-white px-3 py-1 rounded text-xs">Ads</button>
-      </div>
+    <div class="flex justify-between mb-4">
+     <div class="order-1">
+       <div class="">
+         <button class="bg-gray-950 text-white px-3 py-1 rounded text-xs">Ads</button>
+       </div>
+     </div>
       <div class="">
         <div class="font-semibold text-xl">ETH</div>
         <div class="font-semibold text-xl">20,000.01</div>

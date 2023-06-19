@@ -30,7 +30,12 @@
        <div>
          <div class="text-end">
            <div class="text-xs font-semibold text-gray-500">{{asset.rate}}</div>
-           <div class="text-xs font-semibold text-red-600">{{ parseFloat(asset.change) }}%</div>
+           <template v-if="asset.change.includes('-')">
+             <div class="text-xs font-semibold text-gray-100 mt-1 py-[1px] bg-red-500 text-center rounded">{{ parseFloat(asset.change) }}%</div>
+           </template>
+           <template v-else>
+             <div class="text-xs font-semibold text-gray-100 mt-1 py-[1px] bg-emerald-500 text-center rounded" >{{ parseFloat(asset.change) }}%</div>
+           </template>
          </div>
        </div>
      </div>

@@ -1,7 +1,6 @@
 <template>
   <article class="w-full">
-    <div class="text-gray-700 text-xl font-semibold"><i class="pi pi-images"></i><span class="pl-2">Popular NFT</span></div>
-
+    <div class="text-gray-700 text-xl font-semibold"><i class="pi pi-images"></i><span class="pl-2">NFT Profile</span></div>
   </article>
 </template>
 

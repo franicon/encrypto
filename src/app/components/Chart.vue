@@ -1,6 +1,6 @@
 
 <template>
-  <div class="card">
+  <div class="card relative">
     <div class="">
       <div class="flex w-full justify-end">
         <button class="bg-gray-950 text-white px-3 py-1 rounded text-xs">Ads</button>

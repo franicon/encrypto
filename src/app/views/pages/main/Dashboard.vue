@@ -1,21 +1,27 @@
 <template>
   <section class="mb-10 w-full">
-    <div class="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6">
-      <div class="">
+    <div class="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 xl:gap-6 lg:gap-6 md:gap-5 gap-0">
+      <!--Wallet Balance-->
+      <div>
         <BalanceCard/>
         <div class="mt-6">
           <OwnedAssets/>
         </div>
       </div>
-      <div class="col-span-2">
-        <div class="border p-4 grid xl:grid-cols-2 md:grid-cols-2 grid-cols-1 gap-4 w-full">
-          <Chart/>
-          <TopCrypto/>
-          <TransactionHistory/>
+      <!--Chart & Top Crypto-->
+      <div class="xl:col-span-2 lg:col-span-2 lg:order-1">
+        <div class="">
+          <div class="">
+            <Chart/>
+            <TopCrypto class="mt-10"/>
+          </div>
         </div>
       </div>
-      <div class="">
+      <div class="relative xl:order-1">
+        <BalanceCard/>
+        <div class="mt-6">
           <OwnedAssets/>
+        </div>
       </div>
     </div>
   </section>

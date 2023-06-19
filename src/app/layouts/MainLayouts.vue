@@ -9,11 +9,11 @@
       <NavCollapse :menu="menuList"/>
       <!--top-->
       <div class="w-full h-full">
-        <MobileNavBar :menu="menuList" />
+        <MobileNavBar :menu="menuList"/>
         <!--top nav-->
         <TopBar/>
         <!--main-->
-        <section class="h-[calc(100vh-50px)] px-8 relative overflow-x-hidden pt-6 ">
+        <section class="h-[calc(100vh-50px)] xl:px-8 lg:px-4 md:px-4 px-3 relative overflow-x-hidden pt-6">
           <RouterView/>
         </section>
       </div>

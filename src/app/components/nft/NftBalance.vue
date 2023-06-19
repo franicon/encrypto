@@ -1,18 +1,7 @@
 <template>
   <article class="w-full">
-    <div class="text-gray-700 text-xl font-semibold"><i class="pi pi-images"></i><span class="pl-2">NFT Profile</span></div>
-    <div class="mt-3 px-4 py-5 bg-gray-900 rounded flex justify-between items-center">
-      <div>
-        <p class="text-gray-400 font-semibold text-xs pb-1">Total Assets</p>
-        <div class="flex items-center">
-          <div class="text-gray-100 font-semibold text-xl">{{ selectedAsset.fiat }}.00</div>
-          <Dropdown v-model="selectedAsset" :options="assets" optionLabel="currency"></Dropdown>
-        </div>
-        <i class="pi pi-sort-alt text-gray-300"></i>
-        <p class="font-semibold text-sm"><span class="text-gray-400">{{selectedAsset.token}}</span> <small class="text-gray-500">{{selectedAsset.code}}</small></p>
-      </div>
-      <i class="pi pi-images text-gray-600" style="font-size: 4rem"></i>
-    </div>
+    <div class="text-gray-700 text-xl font-semibold"><i class="pi pi-images"></i><span class="pl-2">Popular NFT</span></div>
+
   </article>
 </template>
 

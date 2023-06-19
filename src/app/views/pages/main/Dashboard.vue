@@ -10,15 +10,15 @@
       </div>
       <!--Chart & Top Crypto-->
       <div class="xl:col-span-2 lg:col-span-4 md:col-span-2 lg:order-1 h-screen">
-        <div class="p-3 border">
+        <div class="p-3 border rounded">
           <div class="grid xl:grid-cols-2 lg:grid-cols-2 md:grid-cols-2 gap-5">
            <div class=""> <Chart/></div>
             <div class=""><TopCrypto class=""/></div>
           </div>
-          <div class="grid xl:grid-cols-2 lg:grid-cols-2 md:grid-cols-2 gap-5 mt-5">
-            <div class=""> <TransactionHistory/></div>
-            <div class=""><TopCrypto class=""/></div>
-          </div>
+        </div>
+        <div class="grid xl:grid-cols-2 lg:grid-cols-2 md:grid-cols-2 gap-5 mt-5">
+          <div class=""> <TransactionHistory/></div>
+          <div class=""><TopCrypto class=""/></div>
         </div>
       </div>
       <!--loader & end Crypto-->

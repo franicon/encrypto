@@ -1,6 +1,6 @@
 <template>
   <div class="relative border rounded">
-    <div class=" h-[45rem] overflow-hidden overflow-y-visible">
+    <div class=" h-[46rem] overflow-hidden overflow-y-visible relative">
       <AssetsCard :assets="assets" :owned="true" style-prop="border-b py-4 rounded"/>
     </div>
   </div>

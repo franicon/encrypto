@@ -15,7 +15,7 @@
            <div class=""> <Chart/></div>
           </div>
         </div>
-        <div class="grid xl:grid-cols-2 lg:grid-cols-2 md:grid-cols-2 gap-5 mt-5">
+        <div class="grid xl:grid-cols-2 lg:grid-cols-2 md:grid-cols-2 gap-5  mt-3">
           <div class=""> <TransactionHistory/></div>
           <div class=""><TopCrypto/></div>
         </div>

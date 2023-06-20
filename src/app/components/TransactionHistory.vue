@@ -1,6 +1,6 @@
 <template>
   <div class="relative ">
-    <div class="text-gray-700 text-xl font-semibold"><i class="pi pi-book"></i><span class="pl-2">Transaction History</span>
+    <div class="text-gray-700 text-xl font-semibold pb-2"><i class="pi pi-book"></i><span class="pl-2">Transaction History</span>
     </div>
     <div class="mt-1 h-[26rem] overflow-hidden overflow-y-visible border rounded p-2">
       <div class="py-4">

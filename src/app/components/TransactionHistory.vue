@@ -17,7 +17,7 @@
               <div class="flex justify-between">
                 <div class="">
                   <p class="text-gray-700 font-semibold">Ethereum (ETH)</p>
-                  <p :style="{ color: slotProps.item.color }" class="font-semibold">{{ slotProps.item.status }}</p>
+                  <p :style="{ color: slotProps.item.color }" class="font-semibold text-[10px]">{{ slotProps.item.status }}</p>
                 </div>
                 <div class="text-end">
                   <p class="font-gray-700">0.031</p>
@@ -39,10 +39,10 @@ import Timeline from 'primevue/timeline';
 const events = ref([
   { status: 'Withdraw', date: '15/10/2020 10:30', icon: 'pi pi-arrow-up-right', color: '#f64627'},
   { status: 'Withdraw', date: '15/10/2020 10:30', icon: 'pi pi-arrow-up-right', color: '#f64627'},
-  { status: 'Deposit', date: '15/10/2020 10:30', icon: 'pi pi-arrow-up-right', color: '#28ba96'},
+  { status: 'Deposit', date: '15/10/2020 10:30', icon: 'pi pi-arrow-down-left', color: '#28ba96'},
   { status: 'Withdraw', date: '15/10/2020 10:30', icon: 'pi pi-arrow-up-right', color: '#f64627'},
-  { status: 'Deposit', date: '15/10/2020 10:30', icon: 'pi pi-arrow-up-right', color: '#28ba96'},
-  { status: 'Deposit', date: '15/10/2020 10:30', icon: 'pi pi-arrow-up-right', color: '#28ba96'},
+  { status: 'Deposit', date: '15/10/2020 10:30', icon: 'pi pi-arrow-down-left', color: '#28ba96'},
+  { status: 'Deposit', date: '15/10/2020 10:30', icon: 'pi pi-arrow-down-left', color: '#28ba96'},
   { status: 'Deposit', date: '15/10/2020 14:00', icon: 'pi pi-arrow-down-left', color: '#28ba96'},
   { status: 'Withdraw', date: '15/10/2020 10:30', icon: 'pi pi-arrow-up-right', color: '#f64627'},
 ]);

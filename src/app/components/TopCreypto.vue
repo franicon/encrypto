@@ -1,8 +1,8 @@
 <template>
-  <div class="relative rounded px-2">
-    <div class="text-gray-700 text-xl font-semibold"><i class="pi pi-bolt"></i><span class="pl-2">Top Currency</span>
+  <div class="relative rounded">
+    <div class="text-gray-700 text-xl font-semibold pb-2"><i class="pi pi-bolt"></i><span class="pl-2">Top Currency</span>
     </div>
-    <div class="mt-5 h-[25rem] overflow-hidden overflow-y-visible">
+    <div class="mt-1 h-[26rem] overflow-hidden overflow-y-visible border p-3">
       <AssetsCard :assets="assets"/>
     </div>
   </div>

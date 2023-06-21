@@ -1,11 +1,11 @@
 <template>
-
+<div>
+  <TransactionTable/>
+</div>
 </template>
 
-<script>
-export default {
-  name: "Trade"
-}
+<script setup lang="ts">
+import TransactionTable from "@/app/components/tables/TransactionTable.vue"
 </script>
 
 <style scoped>

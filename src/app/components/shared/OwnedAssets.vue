@@ -10,9 +10,8 @@
 import {ref} from "vue";
 import {owned} from "@/app/_mock/assets";
 import AssetsCard from "@/app/components/shared/AssetsCard.vue";
-import type {ownedAssets} from "@/types";
 
-const assets = ref<Array<ownedAssets[]>>(owned);
+const assets = ref(owned);
 </script>
 
 <style scoped>

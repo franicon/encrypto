@@ -44,7 +44,9 @@
 </template>
 
 <script setup lang="ts">
-defineProps<{assets: Array<string>[], styleProp: string, owned:boolean, fav: boolean, top:boolean}>()
+import type  {assets as assetType} from "@/types";
+
+defineProps<{assets: typeof assetType, styleProp?: string, owned?:boolean, fav?: boolean, top?:boolean}>()
 </script>
 
 <style scoped>

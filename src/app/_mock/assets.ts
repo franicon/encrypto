@@ -1,4 +1,4 @@
-import { tx, assets, ownedAssets } from "@/types";
+import type { tx, assets, ownedAssets } from "@/types";
 
 export const topsAssets: assets[] = [
     {
@@ -188,7 +188,7 @@ export const owned: ownedAssets[] = [
     },
 ]
 
-export const transacttions: tx[] = [
+export const transactions: tx[] = [
     {
         date: '21-06-2023 07:24',
         id: '#88hfd02333633',

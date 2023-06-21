@@ -20,7 +20,7 @@
 import Tag from 'primevue/tag';
 import Column from 'primevue/column';
 import DataTable from 'primevue/datatable';
-import {transacttions} from "@/app/_mock/assets";
+import {transactions} from "@/app/_mock/assets";
 
 import { ref } from 'vue';
 
@@ -56,7 +56,7 @@ const getIcon = (status) => {
   }
 };
 
-const products = ref(transacttions);
+const products = ref(transactions);
 
 </script>
 

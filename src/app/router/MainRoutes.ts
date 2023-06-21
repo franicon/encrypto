@@ -22,9 +22,9 @@ const MainRoutes = {
             component: () => import('@/app/views/pages/main/Wallet.vue'),
         },
         {
-            path: '/trade',
-            name: 'trade',
-            component: () => import('@/app/views/pages/main/Trade.vue'),
+            path: '/transactions',
+            name: 'transactions',
+            component: () => import('@/app/views/pages/main/Transactions.vue'),
         },
         {
             path: '/nft',

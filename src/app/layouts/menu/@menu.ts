@@ -19,7 +19,7 @@ const navList: menu[] = [
             {
                 label: 'Transactions',
                 icon: 'pi pi-arrow-right-arrow-left',
-                to: '/trade'
+                to: '/transactions'
             },
             {
                 label: 'Wallet',

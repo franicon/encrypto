@@ -13,3 +13,12 @@ export type ownedAssets = {
     asset_value: string,
     fiat_value: string,
 }
+
+export type tx = {
+    id: string,
+    date: string,
+    asset: string,
+    amt: string,
+    status: string,
+    tx_type: string
+}

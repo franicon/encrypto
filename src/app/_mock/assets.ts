@@ -1,4 +1,4 @@
-import { assets, ownedAssets } from "@/types";
+import { tx, assets, ownedAssets } from "@/types";
 
 export const topsAssets: assets[] = [
     {
@@ -185,5 +185,48 @@ export const owned: ownedAssets[] = [
         asset_value: '0.00021',
         name: 'Avalanche',
         fiat_value: '0.000',
+    },
+]
+
+export const transacttions: tx[] = [
+    {
+        date: '21-06-2023 07:24',
+        id: '#88hfd02333633',
+        asset: 'Tron - TRX',
+        status: 'PENDING',
+        amt:'0.0002',
+        tx_type: 'BUY',
+    },
+    {
+        date: '21-06-2023 07:24',
+        id: '#88hfd02333633',
+        asset: 'Tron - TRX',
+        status: 'PENDING',
+        amt:'0.0002',
+        tx_type: 'BUY',
+    },
+    {
+        date: '21-06-2023 07:24',
+        id: '#88hfd02333633',
+        asset: 'ETH - USDT',
+        status: 'SUCCESSFUL',
+        amt:'0.0002',
+        tx_type: 'SELL',
+    },
+    {
+        date: '21-06-2023 07:24',
+        id: '#88hfd02333633',
+        asset: 'ETH - USDT',
+        status: 'SUCCESSFUL',
+        amt:'0.0002',
+        tx_type: 'SELL',
+    },
+    {
+        date: '21-06-2023 07:24',
+        id: '#88hfd02333633',
+        asset: 'ETH - USDT',
+        status: 'FAILED',
+        amt:'0.0002',
+        tx_type: 'SELL',
     },
 ]

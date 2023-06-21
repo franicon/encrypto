@@ -1,32 +1,74 @@
 <template>
   <div class="card">
     <DataTable :value="products" removableSort tableStyle="min-width: 50rem">
-      <Column field="code" header="Code" sortable style="width: 25%"></Column>
-      <Column field="name" header="Name" sortable style="width: 25%"></Column>
-      <Column field="category" header="Category" sortable style="width: 25%"></Column>
-      <Column field="quantity" header="Quantity" sortable style="width: 25%"></Column>
+      <Column field="id" header="Tx ID" sortable style="width: 15%"></Column>
+      <Column field="date" header="Date" sortable style="width: 15%"></Column>
+      <Column field="asset" header="Asset" sortable style="width: 15%"></Column>
+      <Column field="amt" header="Tx Amt" style="width: 15%"></Column>
+      <Column field="status" header="Status" sortable style="width: 15%">
+        <template #body="{ data }">
+          <i class="pi" :class="{ 'pi-check-circle text-green-500': data.status, 'pi-times-circle text-red-400': data.FAILED }"></i>
+        </template>
+      </Column>
+      <Column field="tx_type" header="Tx Type" sortable style="width: 15%"></Column>
+      <Column field="" header="Details"  style="width: 15%"></Column>
     </DataTable>
   </div>
 </template>
 
 <script setup>
-import DataTable from 'primevue/datatable';
+import Tag from 'primevue/tag';
 import Column from 'primevue/column';
-import ColumnGroup from 'primevue/columngroup';   // optional
-import Row from 'primevue/row';
-import { ref, onMounted } from 'vue';
+import DataTable from 'primevue/datatable';
+import {transacttions} from "@/app/_mock/assets";
 
-const products = ref([{
-  id: '1000',
-  code: 'f230fh0g3',
-  name: 'Bamboo Watch',
-  description: 'Product Description',
-  image: 'bamboo-watch.jpg',
-  price: 65,
-  category: 'Accessories',
-  quantity: 24,
-  inventoryStatus: 'INSTOCK',
-  rating: 5
-}]);
+import { ref } from 'vue';
+
+const getStatusLabel = (status) => {
+  switch (status) {
+    case 'SUCCESSFUL':
+      return 'success';
+
+    case 'PENDING':
+      return 'warning';
+
+    case 'FAILED':
+      return 'danger';
+
+    default:
+      return null;
+  }
+};
+
+const getIcon = (status) => {
+  switch (status) {
+    case 'SUCCESSFUL':
+      return 'pi pi-check';
+
+    case 'PENDING':
+      return 'pi pi-exclamation-triangle';
+
+    case 'FAILED':
+      return 'pi pi-times';
+
+    default:
+      return null;
+  }
+};
+
+const products = ref(transacttions);
 
 </script>
+
+<style>
+thead {
+  font-size: 12px !important;
+}
+tbody {
+  font-size: 12px !important;
+}
+.p-tag-value {
+  font-size: 11px !important;
+  font-weight: 600;
+}
+</style>

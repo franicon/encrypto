@@ -28,9 +28,8 @@
 
 <script setup lang="ts">
 import { ref } from "vue";
-import type {ownedAssets} from "@/types";
 
-const assets = ref<Array<ownedAssets>[]>([
+const assets = ref([
   { img: 'monkey-1.webp', name: 'Monkey Props', bids: 12, total: '4.3', token: 'ETH'},
   { img: 'monkey-4.webp', name: 'Panda Boxer', bids: 2, total: '0.34', token: 'ADA'},
   { img: 'monkey-3.webp', name: 'Monkey Bady', bids: 12, total: '4.3', token: 'SOL'},

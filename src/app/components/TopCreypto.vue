@@ -12,7 +12,6 @@
 import {ref} from "vue";
 import {topsAssets} from "@/app/_mock/assets";
 import AssetsCard from "@/app/components/shared/AssetsCard.vue";
-import type {assets} from "@/types";
 
 const allAssets = ref(topsAssets);
 </script>

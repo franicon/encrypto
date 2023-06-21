@@ -20,7 +20,7 @@
 import { ref } from "vue";
 import Dropdown from 'primevue/dropdown';
 
-const assets = ref<Array<Object>[]>([
+const assets = ref([
   { fiat:'2000', token: '000.003', name: 'bitcoin', code: 'BTC', currency: 'USD', currency_amt: '760.03' },
   { fiat:'2000', token: '000.003', name: 'bitcoin', code: 'BNB', currency: 'NGN',  currency_amt: '760.03'},
   { fiat:'2000', token: '000.003', name: 'bitcoin', code: 'CEL', currency: 'EUR', currency_amt: '760.03' },
@@ -28,7 +28,7 @@ const assets = ref<Array<Object>[]>([
   { fiat:'2000', token: '000.003', name: 'bitcoin', code: 'COD', currency: 'AUD', currency_amt: '760.03' },
 ]);
 
-const selectedAsset = ref<string>(assets.value[1]);
+const selectedAsset = ref(assets.value[1]);
 
 </script>
 

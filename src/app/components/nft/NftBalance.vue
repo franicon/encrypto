@@ -1,7 +1,7 @@
 <template>
-  <article class="w-full">
+  <article class="w-full mb-10">
     <div class="text-gray-700 text-xl font-semibold"><i class="pi pi-images"></i><span class="pl-2">Most Popular NFT</span></div>
-    <div class="border rounded h-[56.7rem] py-5 px-4 mt-4 relative overflow-x-hidden">
+    <div class="border rounded h-[57.7rem] py-5 px-4 mt-4 relative overflow-hidden">
       <div class="grid grid-cols-2 gap-4 items-baseline" >
         <div class="" v-for="asset in assets" :key="asset.name">
           <div :style="{ 'background-image': 'url(/nft/' + asset.img + ')'}" class="w-full h-36 bg-center bg-cover bg-no-repeat rounded-lg"> </div>

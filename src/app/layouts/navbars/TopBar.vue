@@ -11,14 +11,18 @@
     <!--avatar-->
     <div class="flex md:w-auto w-full justify-between">
       <Notification/>
-      <User/>
+      <div class="flex">
+        <User/>
+        <QrCode/>
+      </div>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import User from '@/app/components/shared/UserCard.vue'
-import Notification from '@/app/components/shared/NotificationCard.vue'
+import User from '@/app/components/shared/UserCard.vue';
+import QrCode from '@/app/components/shared/QrCode.vue';
+import Notification from '@/app/components/shared/NotificationCard.vue';
 
 import { useRoute } from "vue-router";
 import { watch, ref, onMounted } from "vue";

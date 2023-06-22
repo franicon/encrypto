@@ -1,17 +1,17 @@
 <template>
   <article class="w-full">
-    <div class="text-gray-500 md:text-xl text-xl md:font-semibold font-[400]"><i class="pi pi-wallet"></i><span class="pl-2">Wallet Balance</span></div>
-    <div class="lg:mt-3 mt-4 px-4 xl:py-5 py-3 bg-gray-900 rounded flex justify-between items-center">
+<!--    <div class="text-gray-500 md:text-xl text-xl md:font-semibold font-[400]"><i class="pi pi-wallet"></i><span class="pl-2">Wallet Balance</span></div>-->
+    <div class="lg:mt-3  px-4 xl:py-5 py-3 bg-gray-900 rounded flex justify-between items-center">
       <div>
-        <p class="text-gray-400 font-semibold text-xs">Total Assets</p>
+        <p class="text-gray-200 font-[400] text-xs">Total Balance</p>
         <div class="flex items-center">
-          <div class="text-gray-100 font-semibold text-xl">{{ selectedAsset.fiat }}.00</div>
+          <div class="text-gray-100 font-semibold text-[30px]">{{ selectedAsset.fiat }}</div>
           <Dropdown v-model="selectedAsset" :options="assets" optionLabel="currency"></Dropdown>
         </div>
         <i class="pi pi-sort-alt text-gray-300 icon-size"></i>
         <p class="font-semibold text-sm"><span class="text-gray-400">{{selectedAsset.token}}</span> <small class="text-gray-500">{{selectedAsset.code}}</small></p>
       </div>
-      <i class="pi pi-wallet text-gray-600" style="font-size: 4rem"></i>
+      <i class="pi pi-wallet text-gray-800" style="font-size: 7rem"></i>
     </div>
   </article>
 </template>
@@ -21,11 +21,11 @@ import { ref } from "vue";
 import Dropdown from 'primevue/dropdown';
 
 const assets = ref([
-  { fiat:'2000', token: '000.003', name: 'bitcoin', code: 'BTC', currency: 'USD', currency_amt: '760.03' },
-  { fiat:'2000', token: '000.003', name: 'bitcoin', code: 'BNB', currency: 'NGN',  currency_amt: '760.03'},
-  { fiat:'2000', token: '000.003', name: 'bitcoin', code: 'CEL', currency: 'EUR', currency_amt: '760.03' },
-  { fiat:'2000', token: '000.003', name: 'bitcoin', code: 'SOL', currency: 'CAD', currency_amt: '760.03' },
-  { fiat:'2000', token: '000.003', name: 'bitcoin', code: 'COD', currency: 'AUD', currency_amt: '760.03' },
+  { fiat:'6.4', token: '000.003', name: 'bitcoin', code: 'BTC', currency: 'USD', currency_amt: '760.03' },
+  { fiat:'5216', token: '000.003', name: 'bitcoin', code: 'BNB', currency: 'NGN',  currency_amt: '760.03'},
+  { fiat:'5.1', token: '000.003', name: 'bitcoin', code: 'CEL', currency: 'EUR', currency_amt: '760.03' },
+  { fiat:'7.35', token: '000.003', name: 'bitcoin', code: 'SOL', currency: 'CAD', currency_amt: '760.03' },
+  { fiat:'20.2', token: '000.003', name: 'bitcoin', code: 'COD', currency: 'AUD', currency_amt: '760.03' },
 ]);
 
 const selectedAsset = ref(assets.value[1]);

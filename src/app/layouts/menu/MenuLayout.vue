@@ -6,7 +6,7 @@
    </div>
    <!--menu-->
    <div class="main-layout">
-       <div v-for="link in menu" :key="link.label" class="grid mid-gap grid-cols-6 md:grid-cols-1 md:gap-0 md:grid">
+       <div v-for="link in menu" :key="link.label" class="grid mid-gap grid-cols-5 md:grid-cols-1 md:gap-0 md:grid">
         <template v-if="link.label === 'mobile'">
           <div v-for="item in link.children" :key="item.label">
             <NavItem :item="item"/>

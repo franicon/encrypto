@@ -4,10 +4,10 @@
     <Menu ref="menu" id="overlay_menu" :model="items" :popup="true">
       <template #start>
         <div class="w-full p-link flex items-center text-color hover:surface-200 mb-10">
-          <Avatar image="/public/avata.png" class="mx-2" shape="circle" />
+          <Avatar image="/avata.png" class="mx-2" shape="circle" />
           <div class="flex flex-col">
             <span class="font-bold text-sm">Yomi Aluko</span>
-            <span class="text-xs">Developer</span>
+            <span class="text-xs">User Account</span>
           </div>
         </div>
       </template>

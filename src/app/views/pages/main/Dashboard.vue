@@ -1,6 +1,6 @@
 <template>
   <section class="mb-10 w-full">
-    <div class="grid xl:grid-cols-4 lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 grid-cols-1 xl:gap-6 lg:gap-8 md:gap-5 gap-0 content-stretch h-full">
+    <div class="grid xl:grid-cols-4 lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 grid-cols-1 xl:gap-6 lg:gap-8 md:gap-5 gap-0 content-stretch h-full xl:space-y-0 lg:space-y-0 sm:space-y-10 space-y-10">
       <!--Wallet Balance-->
       <div class="xl:col-span-1 lg:col-span-2 lg:h-screen h-full">
         <BalanceCard/>

@@ -1,5 +1,5 @@
 <template>
-    <div class="">
+    <div>
       <router-link :to="`${item.to}`" class="navbar">
         <div :class="item.icon + ' size'"></div>
         <div class="md:text-[15px] hidden md:flex text-[12px] font-semibold">{{ item.label }}</div>

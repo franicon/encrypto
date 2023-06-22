@@ -9,7 +9,7 @@
 }
 
 .navbar {
-    @apply md:space-x-4 space-y-3 md:space-y-0 flex md:flex-row flex-col items-center text-gray-400 md:mb-4 py-6 md:p-3 active
+    @apply md:space-x-4 space-y-0 md:space-y-0 flex md:flex-row flex-col items-center text-gray-400 md:mb-4 py-6 md:p-3 active
 }
 
 .main-layout {

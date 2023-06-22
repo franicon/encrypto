@@ -1,14 +1,14 @@
 <template>
   <article class="w-full">
-    <div class="text-gray-700 md:text-xl text-md font-semibold"><i class="pi pi-wallet"></i><span class="pl-2">Wallet Balance</span></div>
-    <div class="mt-3 px-4 xl:py-5 py-3 bg-gray-900 rounded flex justify-between items-center">
+    <div class="text-gray-500 md:text-xl text-xl md:font-semibold font-[400]"><i class="pi pi-wallet"></i><span class="pl-2">Wallet Balance</span></div>
+    <div class="lg:mt-3 mt-5 px-4 xl:py-5 py-3 bg-gray-900 rounded flex justify-between items-center">
       <div>
-        <p class="text-gray-400 font-semibold text-xs pb-1">Total Assets</p>
+        <p class="text-gray-400 font-semibold text-xs">Total Assets</p>
         <div class="flex items-center">
           <div class="text-gray-100 font-semibold text-xl">{{ selectedAsset.fiat }}.00</div>
           <Dropdown v-model="selectedAsset" :options="assets" optionLabel="currency"></Dropdown>
         </div>
-        <i class="pi pi-sort-alt text-gray-300"></i>
+        <i class="pi pi-sort-alt text-gray-300 icon-size"></i>
         <p class="font-semibold text-sm"><span class="text-gray-400">{{selectedAsset.token}}</span> <small class="text-gray-500">{{selectedAsset.code}}</small></p>
       </div>
       <i class="pi pi-wallet text-gray-600" style="font-size: 4rem"></i>
@@ -69,6 +69,9 @@ p-dropdown-label p-inputtext{
 .p-dropdown-panel .p-dropdown-items .p-dropdown-item.p-highlight {
   color: #121b25;
   background: rgba(18, 27, 37, 0.22) !important;
+}
+.icon-size {
+  font-size: 12px;
 }
 
 </style>

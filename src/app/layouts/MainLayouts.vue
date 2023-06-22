@@ -13,7 +13,7 @@
         <!--top nav-->
         <TopBar/>
         <!--main-->
-        <section class="h-[calc(100vh-50px)] xl:px-8 lg:px-8 md:px-4 px-3 relative overflow-x-hidden pt-6">
+        <section class="h-[calc(100vh-50px)] xl:px-8 lg:px-8 md:px-4 px-3 relative overflow-x-hidden lg:pt-8 pt-8">
           <RouterView/>
         </section>
       </div>

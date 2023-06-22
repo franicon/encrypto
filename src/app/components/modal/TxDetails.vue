@@ -1,5 +1,5 @@
 <template>
-  <Dialog v-model:visible="collapseBar" modal header="Transaction Details"  class="2xl:w-[45vw] xl:w-[50vw] lg:w-[60vw] md:w-[80vw] w-[90vw]">
+  <Dialog v-model:visible="active" modal header="Transaction Details"  class="2xl:w-[45vw] xl:w-[50vw] lg:w-[60vw] md:w-[80vw] w-[90vw]">
     <div>
       <p class="pb-2">Transaction Info</p>
       <div class="border rounded flex ">
@@ -25,9 +25,14 @@
 <script setup lang="ts">
 import {storeToRefs} from "pinia";
 import {useModalStore} from "@/app/stores/other/modal";
+import {computed} from "vue";
 
 const store = useModalStore()
-const { collapseBar } = storeToRefs(store)
+const { modal } = storeToRefs(store);
+
+const active = computed(()=>{
+  return modal.ctn !== null
+})
 </script>
 
 <style scoped>

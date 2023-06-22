@@ -1,7 +1,7 @@
 <template>
   <article class="w-full">
-    <div class="text-gray-700 text-xl font-semibold"><i class="pi pi-wallet"></i><span class="pl-2">Wallet Balance</span></div>
-    <div class="mt-3 px-4 py-5 bg-gray-900 rounded flex justify-between items-center">
+    <div class="text-gray-700 md:text-xl text-md font-semibold"><i class="pi pi-wallet"></i><span class="pl-2">Wallet Balance</span></div>
+    <div class="mt-3 px-4 xl:py-5 py-3 bg-gray-900 rounded flex justify-between items-center">
       <div>
         <p class="text-gray-400 font-semibold text-xs pb-1">Total Assets</p>
         <div class="flex items-center">

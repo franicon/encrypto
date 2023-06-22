@@ -11,7 +11,7 @@
         <i class="pi pi-sort-alt text-gray-300 icon-size"></i>
         <p class="font-semibold text-sm"><span class="text-gray-400">{{selectedAsset.token}}</span> <small class="text-gray-500">{{selectedAsset.code}}</small></p>
       </div>
-      <i class="pi pi-wallet text-gray-800" style="font-size: 9rem"></i>
+      <i class="pi pi-wallet text-gray-800" style="font-size: 7rem"></i>
     </div>
   </article>
 </template>
@@ -21,11 +21,11 @@ import { ref } from "vue";
 import Dropdown from 'primevue/dropdown';
 
 const assets = ref([
-  { fiat:'1000', token: '000.003', name: 'bitcoin', code: 'BTC', currency: 'USD', currency_amt: '760.03' },
+  { fiat:'6.4', token: '000.003', name: 'bitcoin', code: 'BTC', currency: 'USD', currency_amt: '760.03' },
   { fiat:'5216', token: '000.003', name: 'bitcoin', code: 'BNB', currency: 'NGN',  currency_amt: '760.03'},
-  { fiat:'2000', token: '000.003', name: 'bitcoin', code: 'CEL', currency: 'EUR', currency_amt: '760.03' },
-  { fiat:'2000', token: '000.003', name: 'bitcoin', code: 'SOL', currency: 'CAD', currency_amt: '760.03' },
-  { fiat:'2000', token: '000.003', name: 'bitcoin', code: 'COD', currency: 'AUD', currency_amt: '760.03' },
+  { fiat:'5.1', token: '000.003', name: 'bitcoin', code: 'CEL', currency: 'EUR', currency_amt: '760.03' },
+  { fiat:'7.35', token: '000.003', name: 'bitcoin', code: 'SOL', currency: 'CAD', currency_amt: '760.03' },
+  { fiat:'20.2', token: '000.003', name: 'bitcoin', code: 'COD', currency: 'AUD', currency_amt: '760.03' },
 ]);
 
 const selectedAsset = ref(assets.value[1]);

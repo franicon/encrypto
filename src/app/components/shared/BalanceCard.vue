@@ -5,7 +5,7 @@
       <div>
         <p class="text-gray-200 font-[400] text-xs">Total Balance</p>
         <div class="flex items-center">
-          <div class="text-gray-100 font-semibold text-[30px]">{{ selectedAsset.fiat.toLocaleString() }}</div>
+          <div class="text-gray-100 font-semibold text-[30px]">{{ selectedAsset.fiat }}</div>
           <Dropdown v-model="selectedAsset" :options="assets" optionLabel="currency"></Dropdown>
         </div>
         <i class="pi pi-sort-alt text-gray-300 icon-size"></i>

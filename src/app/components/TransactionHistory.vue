@@ -2,7 +2,7 @@
   <div class="relative ">
     <div class="text-gray-700 text-xl font-semibold pb-2"><i class="pi pi-book"></i><span class="pl-2">Transaction History</span>
     </div>
-    <div class="mt-1 h-[26rem] overflow-hidden overflow-y-visible border rounded p-2">
+    <div class="mt-1 h-[27rem] overflow-hidden border rounded p-2">
       <div class="py-4">
         <div class="card">
           <Timeline :value="events" class="w-full md:w-20rem">
@@ -43,8 +43,6 @@ const events = ref([
   { status: 'Withdraw', date: '15/10/2020 10:30', icon: 'pi pi-arrow-up-right', color: '#f64627'},
   { status: 'Deposit', date: '15/10/2020 10:30', icon: 'pi pi-arrow-down-left', color: '#28ba96'},
   { status: 'Deposit', date: '15/10/2020 10:30', icon: 'pi pi-arrow-down-left', color: '#28ba96'},
-  { status: 'Deposit', date: '15/10/2020 14:00', icon: 'pi pi-arrow-down-left', color: '#28ba96'},
-  { status: 'Withdraw', date: '15/10/2020 10:30', icon: 'pi pi-arrow-up-right', color: '#f64627'},
 ]);
 
 </script>

@@ -8,8 +8,8 @@ export const useModalStore = defineStore({
     }),
     getters: {},
     actions: {
-        setVisible () {
-           this.collapseBar = !this.collapseBar
+        setVisible (payload: any) {
+           this.collapseBar = payload
         }
     }
 })

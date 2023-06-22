@@ -34,7 +34,7 @@ const store = useModalStore();
 const title = ref<any>('Dashboard');
 
 const visible = () => {
-  store.setVisible();
+  store.setVisible(true);
 };
 
 watch(() => route.name, () => {

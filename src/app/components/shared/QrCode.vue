@@ -1,10 +1,10 @@
 <template>
  <div class="md:hidden flex">
    <div>
-     <Avatar icon="pi pi-qrcode" class="ml-3 cursor-pointer bg-gray-950" shape="" @click="toggle"/>
+     <Avatar icon="pi pi-qrcode" class="ml-3 cursor-pointer dark-bg" shape="" @click="toggle"/>
      <div class="relative">
        <OverlayPanel ref="op" appendTo="body" >
-
+         <i class="ml-3 cursor-pointer pi pi-qrcode"></i>
        </OverlayPanel>
      </div>
    </div>

@@ -25,3 +25,8 @@ html {
 .pi{
     line-height: 0 !important;
 }
+
+.dark-bg {
+     background-color: #111827 !important;
+    color: white;
+}

@@ -6,14 +6,14 @@
        <div class="flex gap-2 items-center">
          <div class="border p-2 rounded bg-gray-50"><img class="w-5 h-5"  :src="'/coin/' + asset.img" alt="asset.code"></div>
          <div>
-           <div class="text-sm font-semibold text-gray-600">{{asset.name}}</div>
-           <div class="text-xs font-normal">{{asset.code}}</div>
+           <div class="text-sm font-[500] text-gray-700">{{asset.name}}</div>
+           <div class="text-xs font-normal text-gray-400">{{asset.code}}</div>
          </div>
        </div>
        <div>
          <div class="text-end">
-           <div class="text-sm font-semibold text-gray-600">{{asset.asset_value}}</div>
-           <div class="text-xs font-semibold text-gray-400">{{ asset.fiat_value }} USD</div>
+           <div class="text-sm font-[500] text-gray-500">{{asset.asset_value}}</div>
+           <div class="text-xs font-[400] text-gray-500">{{ asset.fiat_value }} USD</div>
          </div>
        </div>
      </div>

@@ -5,7 +5,7 @@
 @tailwind utilities;
 
 .active.router-link-active {
-    @apply bg-gray-100 bg-opacity-5 md:p-3 md:border-l-2 md:border-gray-600 duration-500 transition md:text-gray-100 text-gray-50
+    @apply md:bg-gray-200 md:bg-opacity-5 md:p-3 md:border-l-2 md:border-gray-600 duration-500 transition md:text-gray-100 text-gray-50
 }
 
 .navbar {
@@ -13,5 +13,7 @@
 }
 
 .main-layout {
-    @apply md:h-[calc(90vh-50px)] w-full bg-gray-950 md:px-4 md:mt-8 flex md:flex-col justify-center md:justify-between
+    @apply md:h-[calc(90vh-50px)] w-full bg-gray-950 md:px-4 md:mt-8 flex md:flex-col justify-center md:justify-between py-1
 }
+
+

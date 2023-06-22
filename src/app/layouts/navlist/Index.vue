@@ -20,7 +20,7 @@ import type {menu} from "@/app/layouts/menu/@menu";
   }
   @media (max-width: 468px) {
     .size{
-      font-size: 1rem;
+      font-size: 1.2rem;
     }
   }
 </style>

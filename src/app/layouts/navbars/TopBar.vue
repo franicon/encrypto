@@ -1,5 +1,5 @@
 <template>
-  <div class="xl:px-8 lg:px-8 md:px-4 px-3 flex justify-between items-center border-gray-900  h-[60px] shadow-lg">
+  <div class="xl:px-8 lg:px-8 md:px-4 px-3 flex justify-between items-center border-gray-900  h-[60px] lg:shadow-lg shadow">
     <!--sidebar toggle-->
     <div class="flex items-center space-x-0 md:space-x-6 2xl:space-x-0">
       <div class="hidden md:flex 2xl:hidden">
@@ -11,14 +11,18 @@
     <!--avatar-->
     <div class="flex md:w-auto w-full justify-between">
       <Notification/>
-      <User/>
+      <div class="flex">
+        <User/>
+        <QrCode/>
+      </div>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import User from '@/app/components/shared/UserCard.vue'
-import Notification from '@/app/components/shared/NotificationCard.vue'
+import User from '@/app/components/shared/UserCard.vue';
+import QrCode from '@/app/components/shared/QrCode.vue';
+import Notification from '@/app/components/shared/NotificationCard.vue';
 
 import { useRoute } from "vue-router";
 import { watch, ref, onMounted } from "vue";

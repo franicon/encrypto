@@ -31,3 +31,8 @@ html {
      background-color: #111827 !important;
     color: white;
 }
+
+button {
+    border: none !important;
+    box-shadow: none !important;
+}

@@ -1,4 +1,5 @@
 <template>
+  <TxDetails/>
   <div class="card border shadow-sm">
     <DataTable :value="products" removableSort tableStyle="min-width: 50rem">
       <Column field="id" header="Tx ID" sortable style="width: 15%"></Column>
@@ -32,9 +33,9 @@ import Tag from 'primevue/tag';
 import Column from 'primevue/column';
 import Button from 'primevue/button';
 import DataTable from 'primevue/datatable';
-
 import { transactions } from "@/app/_mock/assets";
 import { useModalStore } from "@/app/stores/other/modal";
+import TxDetails from '@/app/components/modal/TxDetails.vue';
 
 
 import { ref } from 'vue';
@@ -60,11 +61,10 @@ const getStatusLabel = (status) => {
 const products = ref(transactions);
 
 const visible = () => {
-  store.setVisible(true);
+  store.showModal(true);
 };
 
 </script>
-
 <style>
 thead {
   font-size: 12px !important;

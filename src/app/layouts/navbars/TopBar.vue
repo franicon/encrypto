@@ -4,7 +4,7 @@
     <div class="flex items-center space-x-0 md:space-x-6 2xl:space-x-0">
       <div class="hidden md:flex 2xl:hidden">
         <i class="pi pi-align-right text-black cursor-pointer hover:text-gray-600" style="font-size: 1.8rem"
-           @click="showSideBar"></i>
+           @click="store.showModal()"></i>
       </div>
       <div class="xl:text-2xl text-xl capitalize xl:font-medium font-[500] hidden md:flex">{{title}}</div>
     </div>
@@ -32,10 +32,6 @@ const route = useRoute();
 const store = useModalStore();
 
 const title = ref<any>('Dashboard');
-
-const showSideBar = () => {
-  store.showModal( true);
-};
 
 watch(() => route.name, () => {
   title.value = route.name

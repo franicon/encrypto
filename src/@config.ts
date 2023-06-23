@@ -1,11 +1,9 @@
 export type ConfigProps = {
-    visible: any,
-    collapseSideBar: any
+    visible: boolean
 }
 
 const config: ConfigProps = {
-    visible: null,
-    collapseSideBar: null
+    visible: false
 }
 
 export default config;

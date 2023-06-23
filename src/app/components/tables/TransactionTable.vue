@@ -21,7 +21,7 @@
       </Column>
       <Column field="" header="Details"  style="width: 10%">
         <template #body>
-          <Button icon="pi pi-eye" severity="secondary" text rounded aria-label="Bookmark" @click="visible" />
+          <Button icon="pi pi-eye" severity="secondary" text rounded aria-label="Bookmark"/>
         </template>
       </Column>
     </DataTable>
@@ -34,13 +34,10 @@ import Column from 'primevue/column';
 import Button from 'primevue/button';
 import DataTable from 'primevue/datatable';
 import { transactions } from "@/app/_mock/assets";
-import { useModalStore } from "@/app/stores/other/modal";
 import TxDetails from '@/app/components/modal/TxDetails.vue';
 
 
 import { ref } from 'vue';
-
-const store = useModalStore()
 
 const getStatusLabel = (status) => {
   switch (status) {
@@ -59,10 +56,6 @@ const getStatusLabel = (status) => {
 };
 
 const products = ref(transactions);
-
-const visible = () => {
-  store.showModal(true);
-};
 
 </script>
 <style>

@@ -1,7 +1,7 @@
 <template>
   <nav>
     <div class="w-full">
-      <Sidebar v-model:visible="active">
+      <Sidebar v-model:visible="modal.ctn">
         <MainLayout :menu="menu"/>
       </Sidebar>
     </div>
@@ -16,14 +16,9 @@ import MainLayout from "@/app/layouts/menu/MenuLayout.vue"
 
 import { storeToRefs } from "pinia";
 import { useModalStore } from "@/app/stores/other/modal";
-import {computed} from "vue";
 
 const store = useModalStore()
 const { modal } = storeToRefs(store)
-
-const active = computed(()=>{
-  return modal.ctn != null
-})
 
 defineProps<{ menu: typeof navList}>();
 </script>

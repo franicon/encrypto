@@ -5,17 +5,13 @@ export const useModalStore = defineStore({
     id: 'modal',
     state: () => ({
         modal: {
-            ctn: config,
+            ctn: null as config,
         }
     }),
     getters: {},
     actions: {
-        showModal (ctn: boolean) {
-           this.modal.ctn.visible = ctn
+        showModal (ctn: config) {
+           this.modal.ctn = ctn
         },
-        closeModal () {
-            console.log('it clicking')
-            this.modal.ctn.visible = null
-        }
     }
 })

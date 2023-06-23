@@ -34,7 +34,7 @@ const store = useModalStore();
 const title = ref<any>('Dashboard');
 
 const showSideBar = () => {
-  store.showModal(sidebar = true);
+  store.showModal( true);
 };
 
 watch(() => route.name, () => {

@@ -1,5 +1,5 @@
 <template>
-  <Dialog v-model:visible="modal.ctn.visible" modal header="Transaction Details"  class="2xl:w-[45vw] xl:w-[50vw] lg:w-[60vw] md:w-[80vw] w-[90vw]" @click="close">
+  <Dialog v-model:visible="modal.ctn" modal header="Transaction Details"  class="2xl:w-[45vw] xl:w-[50vw] lg:w-[60vw] md:w-[80vw] w-[90vw]">
     <div>
       <p class="pb-2">Transaction Info</p>
       <div class="border rounded flex ">
@@ -23,18 +23,13 @@
 </template>
 
 <script setup lang="ts">
-import {computed} from "vue";
 import {storeToRefs} from "pinia";
 import {useModalStore} from "@/app/stores/other/modal";
 
 import Dialog from 'primevue/dialog';
 
-const store = useModalStore()
+const store = useModalStore();
 const { modal } = storeToRefs(store);
-
-const close = () => {
-  store.closeModal()
-}
 
 </script>
 

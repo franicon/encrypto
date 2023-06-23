@@ -1,5 +1,5 @@
 <template>
-  <Dialog v-model:visible="active" modal header="Transaction Details"  class="2xl:w-[45vw] xl:w-[50vw] lg:w-[60vw] md:w-[80vw] w-[90vw]" @click="close">
+  <Dialog v-model:visible="modal.ctn.visible" modal header="Transaction Details"  class="2xl:w-[45vw] xl:w-[50vw] lg:w-[60vw] md:w-[80vw] w-[90vw]" @click="close">
     <div>
       <p class="pb-2">Transaction Info</p>
       <div class="border rounded flex ">
@@ -29,18 +29,13 @@ import {useModalStore} from "@/app/stores/other/modal";
 
 import Dialog from 'primevue/dialog';
 
-
 const store = useModalStore()
 const { modal } = storeToRefs(store);
 
-const active = computed(()=>{
-  return modal.ctn !== true
-});
-
 const close = () => {
-  console.log('clicked');
-  return modal.ctn === true;
-};
+  store.closeModal()
+}
+
 </script>
 
 <style scoped>

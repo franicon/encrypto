@@ -1,9 +1,9 @@
 export type ConfigProps = {
-    visible: boolean
+    visible: any
 }
 
 const config: ConfigProps = {
-    visible: false
+    visible: null
 }
 
 export default config;

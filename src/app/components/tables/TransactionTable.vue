@@ -33,9 +33,9 @@ import Tag from 'primevue/tag';
 import Column from 'primevue/column';
 import Button from 'primevue/button';
 import DataTable from 'primevue/datatable';
-import { transactions } from "@/app/_mock/assets";
-import TxDetails from '@/app/components/modal/TxDetails.vue';
 
+import { transactions } from "@/app/_mock/trancs";
+import TxDetails from '@/app/components/modal/TxDetails.vue';
 
 import { ref } from 'vue';
 

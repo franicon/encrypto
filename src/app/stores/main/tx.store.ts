@@ -1,11 +1,20 @@
 import {defineStore} from "pinia";
+import {transactions} from "@/app/_mock/trancs";
 
 export const useTxStore = defineStore({
     id: 'tx',
     state: () => ({
-        tx_details: Boolean,
+        details: null,
         modal: false
     }),
-    actions: {},
+    actions: {
+        get_details(id) {
+            this.details = transactions.find((tx) => {
+                console.log(tx)
+                this.modal = true
+                return tx.id = id
+            })
+        }
+    },
     getters: {}
 })

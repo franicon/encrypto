@@ -20,8 +20,8 @@
         </template>
       </Column>
       <Column field="" header="Details"  style="width: 10%">
-        <template #body>
-          <Button icon="pi pi-eye" severity="secondary" text rounded aria-label="Bookmark"/>
+        <template  #body="{data}">
+          <Button icon="pi pi-eye" severity="secondary" text rounded aria-label="Bookmark" @click="store.get_details(data.id)"/>
         </template>
       </Column>
     </DataTable>
@@ -38,6 +38,9 @@ import { transactions } from "@/app/_mock/trancs";
 import TxDetails from '@/app/components/modal/TxDetails.vue';
 
 import { ref } from 'vue';
+import {useTxStore} from "@/app/stores/main/tx.store";
+
+const store = useTxStore()
 
 const getStatusLabel = (status) => {
   switch (status) {

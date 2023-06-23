@@ -9,10 +9,11 @@ export const useTxStore = defineStore({
     }),
     actions: {
         get_details(id) {
-            this.details = transactions.find((tx) => {
-                console.log(tx)
-                this.modal = true
-                return tx.id = id
+            transactions.find((tx) => {
+              if (tx.id == id) {
+                  this.details = tx
+                  this.modal = true
+              }
             })
         }
     },

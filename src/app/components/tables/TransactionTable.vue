@@ -21,7 +21,7 @@
       </Column>
       <Column field="" header="Details"  style="width: 10%">
         <template  #body="{data}">
-          <Button icon="pi pi-eye" severity="secondary" text rounded aria-label="Bookmark" @click="store.get_details(data.id)"/>
+          <Button icon="pi pi-eye" severity="secondary" text  @click="store.get_details(data.id)"/>
         </template>
       </Column>
     </DataTable>

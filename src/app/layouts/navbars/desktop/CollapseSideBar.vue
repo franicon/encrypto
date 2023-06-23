@@ -1,7 +1,7 @@
 <template>
   <nav>
     <div class="w-full">
-      <Sidebar v-model:visible="collapseBar">
+      <Sidebar v-model:visible="modal.isOpen.visible">
         <MainLayout :menu="menu"/>
       </Sidebar>
     </div>
@@ -12,13 +12,13 @@
 import Sidebar from 'primevue/sidebar';
 import navList from "@/app/layouts/menu/@menu";
 
-import MainLayout from "@/app/layouts/menu/MenuLayout.vue"
+import MainLayout from "@/app/layouts/menu/MenuLayout.vue";
 
 import { storeToRefs } from "pinia";
 import { useModalStore } from "@/app/stores/other/modal";
 
 const store = useModalStore()
-const { collapseBar } = storeToRefs(store)
+const { modal } = storeToRefs(store)
 
 defineProps<{ menu: typeof navList}>();
 </script>

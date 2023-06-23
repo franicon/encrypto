@@ -26,7 +26,7 @@
 
 import TopBar from "@/app/layouts/navbars/TopBar.vue";
 import SideBar from "@/app/layouts/navbars/desktop/SideBar.vue";
-import MobileNavBar from "@/app/layouts/navbars/mobile/MobileNavBar.vue"
+import MobileNavBar from "@/app/layouts/navbars/mobile/MobileNavBar.vue";
 import NavCollapse from "@/app/layouts/navbars/desktop/CollapseSideBar.vue";
 
 import {shallowRef} from "vue";

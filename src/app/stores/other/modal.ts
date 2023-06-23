@@ -4,12 +4,14 @@ import { defineStore } from "pinia";
 export const useModalStore = defineStore({
     id: 'modal',
     state: () => ({
-        collapseBar: config.visible,
+        modal: {
+            isOpen: config,
+        }
     }),
     getters: {},
     actions: {
-        setVisible () {
-           this.collapseBar = !this.collapseBar
-        }
+        showModal () {
+           this.modal.isOpen.visible = true;
+        },
     }
 })

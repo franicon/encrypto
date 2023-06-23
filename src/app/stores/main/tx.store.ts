@@ -5,7 +5,7 @@ import {transactions} from "@/app/_mock/trancs";
 export const useTxStore = defineStore({
     id: 'tx',
     state: () => ({
-        details: null as tx ,
+        details: {} as tx ,
         modal: false
     }),
     actions: {

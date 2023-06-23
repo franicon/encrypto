@@ -1,4 +1,4 @@
-import {tx} from "@/types";
+import type { tx } from "@/types";
 
 export const transactions: tx[] = [
     {

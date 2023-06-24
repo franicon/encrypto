@@ -32,46 +32,51 @@ const selectedAsset = ref(assets.value[1]);
 
 </script>
 
-<style>
-.p-dropdown {
+<style scoped lang="css">
+:deep(.p-dropdown-panel .p-dropdown-items .p-dropdown-item ){
+  font-size:12px !important;
+}
+
+:deep(.p-dropdown) {
   box-shadow: none;
   background-color: transparent;
   border:0;
   padding: 0;
   color:#fff !important;
 }
-.p-dropdown {
+:deep(.p-dropdown) {
   box-shadow: none !important;
   outline: none;
   border:0;
   color:#fff !important;
 }
- .p-dropdown-item {
+ .p-dropdown-item{
   padding: 3px 13px !important;
-   margin: 10px;
-   font-size: 13px;
+   margin: 10px !important;
+   font-size: 10px !important;
 }
-.p-dropdown-trigger {
+:deep(.p-dropdown-trigger) {
   /*display: none;*/
   padding: 0 !important;
-  justify-content: flex-start;
+  justify-content: flex-start !important;
   width:10px !important;
   color: #d1d1d1 !important;
 }
-.p-dropdown-label {
-  font-size: 13px;
-  padding-right: 5px;
+:deep(.p-dropdown-label) {
+  font-size: 13px !important;
+  padding-right: 5px !important;
   color: #d1d1d1;
 }
+
 p-dropdown-label p-inputtext{
   display: none;
 }
-.p-dropdown-panel .p-dropdown-items .p-dropdown-item.p-highlight {
-  color: #121b25;
+:deep(.p-dropdown-panel .p-dropdown-items .p-dropdown-item.p-highlight) {
+  color: #121b25 !important;
   background: rgba(18, 27, 37, 0.22) !important;
 }
-.icon-size {
-  font-size: 12px;
+:deep(.icon-size) {
+  font-size: 12px !important;
 }
 
 </style>

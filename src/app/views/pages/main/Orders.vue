@@ -1,11 +1,9 @@
 <template>
-
+  <div class=""></div>
 </template>
 
-<script>
-export default {
-  name: "Action"
-}
+<script setup lang="ts">
+
 </script>
 
 <style scoped>

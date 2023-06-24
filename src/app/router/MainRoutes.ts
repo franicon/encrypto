@@ -12,14 +12,14 @@ const MainRoutes = {
             component: () => import('@/app/views/pages/main/Dashboard.vue'),
         },
         {
-            path: '/actions',
-            name: 'action',
-            component: () => import('@/app/views/pages/main/Action.vue'),
+            path: '/buy-sell',
+            name: 'buy-sell',
+            component: () => import('@/app/views/pages/main/Buy&Sell.vue'),
         },
         {
-            path: '/wallet',
-            name: 'wallet',
-            component: () => import('@/app/views/pages/main/Wallet.vue'),
+            path: '/orders',
+            name: 'orders',
+            component: () => import('@/app/views/pages/main/Orders.vue'),
         },
         {
             path: '/transactions',

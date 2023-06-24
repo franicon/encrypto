@@ -30,11 +30,11 @@
 
 <script setup lang="ts">
 import Chart from "@/app/components/Chart.vue";
-import TopCrypto from "@/app/components/TopCreypto.vue";
+import TopCrypto from "@/app/components/shared/TopCreypto.vue";
 import NftProfile from "@/app/components/nft/NftProfile.vue";
 import BalanceCard from "@/app/components/shared/BalanceCard.vue";
 import OwnedAssets from "@/app/components/shared/OwnedAssets.vue";
-import TransactionHistory from "@/app/components/TransactionHistory.vue";
+import TransactionHistory from "@/app/components/shared/TransactionHistory.vue";
 </script>
 
 <style scoped>

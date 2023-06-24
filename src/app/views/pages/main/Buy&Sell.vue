@@ -23,7 +23,7 @@
         </Dropdown>
         <div class="flex flex-col gap-2 mt-8">
           <label for="username" class="text-sm font-[500]">Amount</label>
-          <InputText id="username" v-model="value" class="p-inputtext-lg" aria-describedby="username-help" />
+          <InputText id="username" class="p-inputtext-lg" aria-describedby="username-help" />
           <small id="username-help" class="text-gray-400 text-xs">Min: 5.00 USD | Max: 500.00 USD.</small>
         </div>
         <div class="card flex justify-content-center mt-8 border p-4">
@@ -69,7 +69,7 @@ import RadioButton from 'primevue/radiobutton';
 
   const setTab = ref(true)
 
-  const show = (id) => {
+  const show = (id: number) => {
     tabs.value.find(tab => {
       if (tab.id == id) {
         tab.active = true
@@ -81,7 +81,7 @@ import RadioButton from 'primevue/radiobutton';
     });
   }
 
-  const isActive = (active) => {
+  const isActive = (active: boolean) => {
     switch (active) {
       case true:
         return 'bg-gray-950 text-gray-300 transition-all duration-500';

@@ -40,54 +40,25 @@
   <!--Buy Button-->
   <div class="mt-8 flex justify-center">
     <button class="w-56 rounded bg-gray-700 hover:bg-gray-800 transition-all duration-500 py-4 text-gray-50 font-[500]"
-            @click="visible = true">Buy Now
+            @click="store.openModal()">Continue
     </button>
   </div>
 
   <!--Modal Buy-->
-
+  <BuyModal/>
 </template>
 
 <script setup lang="ts">
-import Button from 'primevue/button';
-import Dialog from 'primevue/dialog';
-import Dropdown from 'primevue/dropdown';
-import InputText from 'primevue/inputtext';
-import InputNumber from 'primevue/inputnumber';
-import RadioButton from 'primevue/radiobutton';
-import ConfirmDialog from 'primevue/confirmdialog';
-import Accordion from 'primevue/accordion';
-import AccordionTab from 'primevue/accordiontab';
-
-
 import { ref } from "vue";
 
-import { useToast } from "primevue/usetoast";
-import { useConfirm } from "primevue/useconfirm";
+// components
+import Dropdown from 'primevue/dropdown';
+import InputNumber from 'primevue/inputnumber';
+import BuyModal from '@/app/components/modal/BuyModal.vue';
+import {useBuySellStore} from "@/app/stores/main/buy-sell.store";
 
-const toast = useToast();
-const confirm = useConfirm();
 
-const visible = ref(false);
-
-const confirm1 = () => {
-  confirm.require({
-    message: 'Are you sure you want to cancel?',
-    header: 'Confirmation',
-    icon: 'pi pi-exclamation-triangle',
-    acceptIcon: 'pi pi-check',
-    rejectIcon: 'pi pi-times',
-    acceptButton: 'Yeoooo',
-    accept: () => {
-      visible.value = false
-      toast.add({ severity: 'info', summary: 'Confirmed', detail: 'You have accepted', life: 3000 });
-
-    },
-    reject: () => {
-      toast.add({ severity: 'error', summary: 'Rejected', detail: 'You have rejected', life: 3000 });
-    }
-  });
-};
+const store = useBuySellStore();
 
 const cities = ref([
   {name: 'Bitcoin', code: 'BTC', img: 'btc.svg'},
@@ -104,23 +75,11 @@ const categories = ref([
 
 ]);
 
-const wallet = ref([
-    { name: 'Bitcoin', address: 'bc1qxy2kgdygjrs-------493p83kkfjhx0wlh', img: 'btc.svg'},
-    { name: 'Others', address: '', img: 'btc.svg'},
-])
-
 const amount = ref(2000);
 const selectedCity = ref(cities.value[0]);
 const selectedCategory = ref('Bank Transfer');
-const selectedWallet = ref('Bitcoin');
-
-
-const active = ref(0);
 </script>
 
 <style scoped>
-.address-input {
-  border: 0 !important;
-  font-size: small;
-}
+
 </style>

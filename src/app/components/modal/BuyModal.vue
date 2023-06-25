@@ -1,6 +1,6 @@
 <template>
 <div class="card flex justify-content-center">
-    <Dialog v-model:visible="visible" :closable="false" modal header="Confirm Order" class="2xl:w-[30vw] xl:w-[50vw] lg:w-[60vw] md:w-[80vw] w-[90vw]">
+    <Dialog v-model:visible="isOpen" :closable="false" modal header="Confirm Order" class="2xl:w-[30vw] xl:w-[50vw] lg:w-[60vw] md:w-[80vw] w-[90vw]">
       <div>
         <div class="text-center py-4">
           <i class="pi pi-qrcode text-yellow-500 pb-3" style="font-size: 2rem"></i>
@@ -48,7 +48,7 @@
 
           <div class="mt-8 flex justify-center">
             <button class="w-56 rounded bg-gray-700 hover:bg-gray-800 transition-all text-sm duration-500 py-4 text-gray-50 font-[500]"
-                    @click="visible = true">BUY NOW
+                   >BUY NOW
             </button>
           </div>
         </div>
@@ -62,9 +62,59 @@
 </template>
 
 <script setup lang="ts">
+import { ref } from "vue";
+import { storeToRefs } from "pinia";
+import { useBuySellStore } from "@/app/stores/main/buy-sell.store";
 
+import Dialog from 'primevue/dialog';
+import Button from 'primevue/button';
+import InputText from 'primevue/inputtext';
+import Accordion from 'primevue/accordion';
+import RadioButton from 'primevue/radiobutton';
+import AccordionTab from 'primevue/accordiontab';
+import ConfirmDialog from 'primevue/confirmdialog';
+
+import { useToast } from "primevue/usetoast";
+import { useConfirm } from "primevue/useconfirm";
+
+
+const store = useBuySellStore();
+const { isOpen } = storeToRefs(store);
+
+const toast = useToast();
+const confirm = useConfirm();
+
+const confirm1 = () => {
+  confirm.require({
+    message: 'Are you sure you want to cancel?',
+    header: 'Confirmation',
+    icon: 'pi pi-exclamation-triangle',
+    acceptIcon: 'pi pi-check',
+    rejectIcon: 'pi pi-times',
+    acceptButton: 'Yeoooo',
+    accept: () => {
+      visible.value = false
+      toast.add({ severity: 'info', summary: 'Confirmed', detail: 'You have accepted', life: 3000 });
+
+    },
+    reject: () => {
+      toast.add({ severity: 'error', summary: 'Rejected', detail: 'You have rejected', life: 3000 });
+    }
+  });
+};
+
+const wallet = ref([
+  { name: 'Bitcoin', address: 'bc1qxy2kgdygjrs-------493p83kkfjhx0wlh', img: 'btc.svg'},
+  { name: 'Others', address: '', img: 'btc.svg'},
+]);
+
+const active = ref(0);
+const selectedWallet = ref('Bitcoin');
 </script>
 
 <style scoped>
-
+.address-input {
+  border: 0 !important;
+  font-size: small;
+}
 </style>

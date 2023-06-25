@@ -56,7 +56,7 @@
         <div class="mt-3">
           <!--DropDown Wallet-->
           <div class="mt-8">
-            <p class="text-md font-[500] pb-2">Receiving Address</p>
+            <p class="text-sm font-[500] pb-2">Receiving Address</p>
             <div class="card flex justify-content-center border px-3 pt-2">
               <div class="flex flex-col gap-3 w-full relative overflow-hidden">
                 <div v-for="category in wallet" :key="category.key" class="flex align-items-center border-b">
@@ -80,12 +80,22 @@
           </div>
 
           <div class="mt-8">
-            <p class="text-md font-[500] pb-2">Order Details</p>
-            <div class="card flex justify-content-center border px-3 pt-2">
+            <p class="text-sm font-[500] pb-2">Transaction Details</p>
+            <div class="card flex justify-content-center pt-2">
               <div class="flex flex-col gap-3 w-full relative overflow-hidden">
-
+                <Accordion :activeIndex="active">
+                  <AccordionTab header="Show Details">
+                    <p class="text-sm font-semibold text-gray-800">Total:</p>
+                  </AccordionTab>
+                </Accordion>
               </div>
             </div>
+          </div>
+
+          <div class="mt-8 flex justify-center">
+            <button class="w-56 rounded bg-gray-700 hover:bg-gray-800 transition-all text-sm duration-500 py-4 text-gray-50 font-[500]"
+                    @click="visible = true">BUY NOW
+            </button>
           </div>
         </div>
       </div>
@@ -106,6 +116,9 @@ import InputText from 'primevue/inputtext';
 import InputNumber from 'primevue/inputnumber';
 import RadioButton from 'primevue/radiobutton';
 import ConfirmDialog from 'primevue/confirmdialog';
+import Accordion from 'primevue/accordion';
+import AccordionTab from 'primevue/accordiontab';
+
 
 import { ref } from "vue";
 
@@ -165,6 +178,7 @@ const logData = () => {
   console.log(selectedCity.value.name, selectedCategory.value, amount.value)
 }
 
+const active = ref(0);
 </script>
 
 <style scoped>

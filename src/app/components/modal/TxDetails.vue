@@ -1,5 +1,5 @@
 <template>
-  <Dialog v-model:visible="modal" modal header="Transaction Details"  class="2xl:w-[45vw] xl:w-[50vw] lg:w-[60vw] md:w-[80vw] w-[90vw]">
+  <Dialog v-model:visible="modal" modal header="Transaction Details" class="2xl:w-[45vw] xl:w-[50vw] lg:w-[60vw] md:w-[80vw] w-[90vw]">
     <div>
       <p class="pb-2 text-xs font-semibold text-gray-600">TRANSACTION DETAILS</p>
       <div class="border rounded flex ">

@@ -7,6 +7,7 @@ import PrimeVue from 'primevue/config';
 import "primevue/resources/primevue.min.css";
 //theme
 import "primevue/resources/themes/lara-light-indigo/theme.css";
+import "./assets/theme.css"
 
 
 import { createApp } from 'vue'

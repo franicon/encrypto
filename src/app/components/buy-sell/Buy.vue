@@ -46,7 +46,7 @@
 <!--  Modal-->
   <div class="card flex justify-content-center">
     <Button label="Show" icon="pi pi-external-link" @click="visible = true" />
-    <Dialog v-model:visible="visible" modal header="Header" class="2xl:w-[45vw] xl:w-[50vw] lg:w-[60vw] md:w-[80vw] w-[90vw]">
+    <Dialog v-model:visible="visible" modal header="Confirm Order" class="2xl:w-[30vw] xl:w-[50vw] lg:w-[60vw] md:w-[80vw] w-[90vw]">
       <p></p>
     </Dialog>
   </div>

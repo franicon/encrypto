@@ -4,7 +4,7 @@
       <!--Tabs-->
       <div class="flex gap-3 justify-center">
         <template v-for="tab in tabs" :key="tab.id">
-          <button class="px-2 py-2 rounded text-xs font-[500] shadow-lg" :class="isActive(tab.active)"
+          <button class="px-8 py-3 rounded text-xs font-[500] shadow-lg" :class="isActive(tab.active)"
                   @click="show(tab.id)">
             <i class="pi pi-database"></i> {{ tab.type }}
           </button>

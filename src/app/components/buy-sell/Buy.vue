@@ -37,28 +37,63 @@
     </div>
   </div>
 
-  <div class="mt-8">
-    <button class="w-full bg-gray-950 hover:bg-gray-700 transition-all duration-500 py-4 text-gray-50 font-[500]"
-            @click="visible = true">Buy Now
+  <div class="mt-8 flex justify-center">
+    <button class="w-80 rounded bg-gray-700 hover:bg-gray-800 transition-all duration-500 py-4 text-gray-50 font-[500]"
+            @click="visible = true">Continue
     </button>
   </div>
 
-<!--  Modal-->
+<!--  Modal Buy-->
   <div class="card flex justify-content-center">
-    <Button label="Show" icon="pi pi-external-link" @click="visible = true" />
-    <Dialog v-model:visible="visible" modal header="Confirm Order" class="2xl:w-[30vw] xl:w-[50vw] lg:w-[60vw] md:w-[80vw] w-[90vw]">
-      <p></p>
+    <Dialog v-model:visible="visible" :closable="false" modal header="Confirm Order" class="2xl:w-[30vw] xl:w-[50vw] lg:w-[60vw] md:w-[80vw] w-[90vw]">
+      <div>
+        <div class="text-center py-4">
+          <i class="pi pi-qrcode text-yellow-500 pb-3" style="font-size: 2rem"></i>
+          <h1 class="font-[600] text-xl py-3">Confirm Order</h1>
+          <p class="text-sm">You are about to make a purchase of <br> <span class="text-gray-400 font-[500] pt-2 text-sm">0.0024 BTC @ 1 BTC = 2,873,930</span></p>
+        </div>
+        <div class="mt-3">
+          <p class="text-md font-[500]">Receiving Address</p>
+        </div>
+      </div>
+      <ConfirmDialog></ConfirmDialog>
+      <template #header>
+        <div class="flex justify-end w-full"><Button icon="pi pi-times"  text @click="confirm1()"/></div>
+      </template>
     </Dialog>
   </div>
 </template>
 
 <script setup lang="ts">
+import Button from 'primevue/button';
 import Dialog from 'primevue/dialog';
 import Dropdown from 'primevue/dropdown';
 import InputNumber from 'primevue/inputnumber';
 import RadioButton from 'primevue/radiobutton';
+import ConfirmDialog from 'primevue/confirmdialog';
 
 import { ref } from "vue";
+
+import { useConfirm } from "primevue/useconfirm";
+import { useToast } from "primevue/usetoast";
+
+const confirm = useConfirm();
+const toast = useToast();
+
+
+const confirm1 = () => {
+  confirm.require({
+    message: 'Are you sure you want to proceed?',
+    header: 'Confirmation',
+    icon: 'pi pi-exclamation-triangle',
+    accept: () => {
+      toast.add({ severity: 'info', summary: 'Confirmed', detail: 'You have accepted', life: 3000 });
+    },
+    reject: () => {
+      toast.add({ severity: 'error', summary: 'Rejected', detail: 'You have rejected', life: 3000 });
+    }
+  });
+};
 
 const cities = ref([
   {name: 'Bitcoin', code: 'BTC', img: 'btc.svg'},
@@ -70,7 +105,7 @@ const cities = ref([
 const categories = ref([
   {name: 'Bank Transfer', key: 'M', icon: 'pi-money-bill'},
   {name: 'Crypto Transfer', key: 'A', icon: 'pi-sync'},
-  {name: 'NFT', key: 'P', icon: 'pi-image'},
+  {name: 'Loan', key: 'P', icon: 'pi-image'},
 
 ]);
 

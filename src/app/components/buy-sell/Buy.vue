@@ -1,4 +1,6 @@
 <template>
+  <Toast/>
+
   <!--Amount-->
   <div class="flex flex-col gap-2 mt-8">
     <label for="username" class="text-sm font-[500]">Amount</label>
@@ -17,6 +19,13 @@
                :class="`mr-2 flag flag-${slotProps.value.code.toLowerCase()}`" style="width: 18px"/>
           <div>{{ slotProps.value.name }} ({{ slotProps.value.code }}) <p class="text-xs text-gray-500">1 btc @200</p>
           </div>
+        </div>
+      </template>
+      <template #option="slotProps">
+        <div class="flex items-center">
+          <img :alt="slotProps.option.label" :src="'/coin/' + slotProps.option.img"
+               :class="`mr-2 flag flag-${slotProps.option.code.toLowerCase()}`" style="width: 18px; height: 18px"/>
+          <div>{{ slotProps.option.name }}</div>
         </div>
       </template>
     </Dropdown>
@@ -50,13 +59,15 @@
 
 <script setup lang="ts">
 import { ref } from "vue";
+import { useBuySellStore } from "@/app/stores/main/buy-sell.store";
 
 // components
+import Toast from 'primevue/toast';
 import Dropdown from 'primevue/dropdown';
 import InputNumber from 'primevue/inputnumber';
 import RadioButton from 'primevue/radiobutton';
 import BuyModal from '@/app/components/modal/BuyModal.vue';
-import { useBuySellStore } from "@/app/stores/main/buy-sell.store";
+
 
 
 const store = useBuySellStore();

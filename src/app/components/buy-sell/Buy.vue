@@ -15,7 +15,7 @@
     <Dropdown v-model="selectedCity" :options="cities" optionLabel="name" class="w-full md:w-14rem">
       <template #value="slotProps">
         <div v-if="slotProps.value" class="flex items-center gap-2 P-1">
-          <img :alt="slotProps.value.label" :src="'/coin/' + slotProps.value.img"
+          <img :alt="slotProps.value.code" :src="'/coin/' + slotProps.value.img"
                :class="`mr-2 flag flag-${slotProps.value.code.toLowerCase()}`" style="width: 18px"/>
           <div>{{ slotProps.value.name }} ({{ slotProps.value.code }}) <p class="text-xs text-gray-500">1 btc @200</p>
           </div>
@@ -23,7 +23,7 @@
       </template>
       <template #option="slotProps">
         <div class="flex items-center">
-          <img :alt="slotProps.option.label" :src="'/coin/' + slotProps.option.img"
+          <img :alt="slotProps.option.code" :src="'/coin/' + slotProps.option.img"
                :class="`mr-2 flag flag-${slotProps.option.code.toLowerCase()}`" style="width: 18px; height: 18px"/>
           <div>{{ slotProps.option.name }}</div>
         </div>

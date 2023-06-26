@@ -1,4 +1,6 @@
 <template>
+  <Toast/>
+
   <!--Amount-->
   <div class="flex flex-col gap-2 mt-8">
     <label for="username" class="text-sm font-[500]">Amount</label>
@@ -13,10 +15,17 @@
     <Dropdown v-model="selectedCity" :options="cities" optionLabel="name" class="w-full md:w-14rem">
       <template #value="slotProps">
         <div v-if="slotProps.value" class="flex items-center gap-2 P-1">
-          <img :alt="slotProps.value.label" :src="'/coin/' + slotProps.value.img"
+          <img :alt="slotProps.value.code" :src="'/coin/' + slotProps.value.img"
                :class="`mr-2 flag flag-${slotProps.value.code.toLowerCase()}`" style="width: 18px"/>
           <div>{{ slotProps.value.name }} ({{ slotProps.value.code }}) <p class="text-xs text-gray-500">1 btc @200</p>
           </div>
+        </div>
+      </template>
+      <template #option="slotProps">
+        <div class="flex items-center">
+          <img :alt="slotProps.option.code" :src="'/coin/' + slotProps.option.img"
+               :class="`mr-2 flag flag-${slotProps.option.code.toLowerCase()}`" style="width: 18px; height: 18px"/>
+          <div>{{ slotProps.option.name }}</div>
         </div>
       </template>
     </Dropdown>
@@ -37,67 +46,31 @@
     </div>
   </div>
 
+  <!--Buy Button-->
   <div class="mt-8 flex justify-center">
-    <button class="w-80 rounded bg-gray-700 hover:bg-gray-800 transition-all duration-500 py-4 text-gray-50 font-[500]"
-            @click="visible = true">Continue
+    <button class="w-44 rounded bg-gray-700 hover:bg-gray-800 transition-all duration-500 py-3 text-gray-50 font-[500]"
+            @click="store.openModal()">Continue
     </button>
   </div>
 
-<!--  Modal Buy-->
-  <div class="card flex justify-content-center">
-    <Dialog v-model:visible="visible" :closable="false" modal header="Confirm Order" class="2xl:w-[30vw] xl:w-[50vw] lg:w-[60vw] md:w-[80vw] w-[90vw]">
-      <div>
-        <div class="text-center py-4">
-          <i class="pi pi-qrcode text-yellow-500 pb-3" style="font-size: 2rem"></i>
-          <h1 class="font-[600] text-xl py-3">Confirm Order</h1>
-          <p class="text-sm">You are about to make a purchase of <br> <span class="text-gray-400 font-[500] pt-2 text-sm">0.0024 BTC @ 1 BTC = 2,873,930</span></p>
-        </div>
-        <div class="mt-3">
-          <p class="text-md font-[500]">Receiving Address</p>
-        </div>
-      </div>
-      <ConfirmDialog></ConfirmDialog>
-      <template #header>
-        <div class="flex justify-end w-full"><Button icon="pi pi-times"  text @click="confirm1()"/></div>
-      </template>
-    </Dialog>
-  </div>
+  <!--Modal Buy-->
+  <BuyModal/>
 </template>
 
 <script setup lang="ts">
-import Button from 'primevue/button';
-import Dialog from 'primevue/dialog';
+import { ref } from "vue";
+import { useBuySellStore } from "@/app/stores/main/buy-sell.store";
+
+// components
+import Toast from 'primevue/toast';
 import Dropdown from 'primevue/dropdown';
 import InputNumber from 'primevue/inputnumber';
 import RadioButton from 'primevue/radiobutton';
-import ConfirmDialog from 'primevue/confirmdialog';
-
-import { ref } from "vue";
-
-import { useToast } from "primevue/usetoast";
-import { useConfirm } from "primevue/useconfirm";
-
-const toast = useToast();
-const confirm = useConfirm();
-
-const visible = ref(false);
+import BuyModal from '@/app/components/modal/BuyModal.vue';
 
 
-const confirm1 = () => {
-  confirm.require({
-    message: 'Are you sure you want to cancel?',
-    header: 'Confirmation',
-    icon: 'pi pi-exclamation-triangle',
-    accept: () => {
-      visible.value = false
-      toast.add({ severity: 'info', summary: 'Confirmed', detail: 'You have accepted', life: 3000 });
 
-    },
-    reject: () => {
-      toast.add({ severity: 'error', summary: 'Rejected', detail: 'You have rejected', life: 3000 });
-    }
-  });
-};
+const store = useBuySellStore();
 
 const cities = ref([
   {name: 'Bitcoin', code: 'BTC', img: 'btc.svg'},
@@ -106,21 +79,17 @@ const cities = ref([
   {name: 'Tether', code: 'USDT', img: 'usdt.svg'},
   {name: 'Shiba Inu', code: 'SHIB', img: 'shiba.webp'}
 ]);
+
 const categories = ref([
-  {name: 'Bank Transfer', key: 'M', icon: 'pi-money-bill'},
-  {name: 'Crypto Transfer', key: 'A', icon: 'pi-sync'},
-  {name: 'Loan', key: 'P', icon: 'pi-image'},
+  {name: 'Paychant', key: 'A', icon: 'pi-sync'},
+  {name: 'Moonpay', key: 'M', icon: 'pi-sync'},
+  {name: 'Payday', key: 'P', icon: 'pi-sync'},
 
 ]);
 
 const amount = ref(2000);
 const selectedCity = ref(cities.value[0]);
-const selectedCategory = ref('Bank Transfer');
-
-const logData = () => {
-  console.log(selectedCity.value.name, selectedCategory.value, amount.value)
-}
-
+const selectedCategory = ref('Paychant');
 </script>
 
 <style scoped>

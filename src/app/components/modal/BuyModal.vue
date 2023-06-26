@@ -101,7 +101,6 @@ const confirm1 = () => {
     icon: 'pi pi-exclamation-triangle',
     acceptIcon: 'pi pi-check',
     rejectIcon: 'pi pi-times',
-    acceptButton: 'Yeoooo',
     accept: () => {
      store.openModal()
       toast.add({ severity: 'info', summary: 'Confirmed', detail: 'You have accepted', life: 3000 });

@@ -25,11 +25,11 @@
   <!--  Payment Method-->
   <div class="card flex justify-content-center mt-8 border p-4">
     <div class="flex flex-col gap-3 w-full">
-      <div v-for="category in categories" :key="category.code" class="flex align-items-center pb-3 border-b">
+      <div v-for="category in categories" :key="category.key" class="flex align-items-center pb-3 border-b">
         <div class="flex justify-between w-full pb-3">
           <div class="">
-            <RadioButton v-model="selectedCategory" :inputId="category.code" :value="category.name"/>
-            <label :for="category.code" class="ml-2">{{ category.name }}</label>
+            <RadioButton v-model="selectedCategory" :inputId="category.key" :value="category.name"/>
+            <label :for="category.key" class="ml-2">{{ category.name }}</label>
           </div>
           <div><i :class="'pi ' + category.icon"></i></div>
         </div>

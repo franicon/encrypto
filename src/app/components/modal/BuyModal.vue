@@ -11,15 +11,15 @@
           <!--DropDown Wallet-->
           <div class="mt-8">
             <p class="text-sm font-[500] pb-2">Receiving Address</p>
-            <div class="card flex justify-content-center border px-3 py-2">
+            <div class="card flex justify-content-center border border-gray-400 border-dashed rounded px-3 py-2">
               <div class="flex flex-col gap-3 w-full relative overflow-hidden">
-                <div v-for="category in wallet" :key="category.key" class="flex align-items-center border-b">
+                <div v-for="category in wallet" :key="category.name" class="flex align-items-center border-b">
                   <div class="flex justify-between w-full pb-3">
                     <div class="flex items-center">
-                      <RadioButton v-model="selectedWallet" :inputId="category.key" :value="category.name"/>
+                      <RadioButton v-model="selectedWallet" :inputId="category.name" :value="category.name"/>
                       <div class="">
                         <div class="">
-                          <label :for="category.key" class="ml-2 text-sm">{{ category.name }}</label>
+                          <label :for="category.name" class="ml-2 text-sm">{{ category.name }}</label>
                           <p class="ml-2 text-xs">{{category.address}}</p>
                         </div>
                       </div>
@@ -34,8 +34,25 @@
           </div>
 
           <div class="mt-8">
-            <p class="text-sm font-[500] pb-2">Transaction Details</p>
-            <div class="border p-3 rounded"></div>
+            <p class="text-sm font-[500] text-gray-500 mb-2 pb-1 border-b border-dashed border-gray-400">Transaction Details</p>
+            <div class="space-y-2">
+              <div class=" flex justify-between items-center">
+                <p class="text-gray-400 font-[500] text-xs">Token-amount:</p>
+                <p class="text-gray-500 font-[600] text-[11px]">2000 NGN</p>
+              </div>
+              <div class=" flex justify-between items-center">
+                <p class="text-gray-400 font-[500] text-xs">Transaction-fee:</p>
+                <p class="text-gray-500 font-[600] text-[11px]">0.40 NGN</p>
+              </div>
+              <div class=" flex justify-between items-center">
+                <p class="text-gray-400 font-[500] text-xs">Network-fee:</p>
+                <p class="text-gray-500 font-[600] text-[11px]">0.50 NGN</p>
+              </div>
+              <div class=" flex justify-between items-center border-t pt-1">
+                <p class="text-gray-700 font-[500] text-xs">Total-fee:</p>
+                <p class="text-gray-700 font-[600] text-[11px]">2030.00 NGN</p>
+              </div>
+            </div>
           </div>
 
           <div class="mt-8 flex justify-center">

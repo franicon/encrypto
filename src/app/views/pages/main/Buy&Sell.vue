@@ -1,6 +1,6 @@
 <template>
   <div class="w-full h-full xl:mt-14 mb-10">
-    <div class="xl:w-[30vw] w-[90vw] border rounded mx-auto p-10 shadow-sm">
+    <div class="2xl:w-[30vw] xl:w-[35vw] lg:w-[45vw] md:w-[60vw] w-[90vw] border rounded mx-auto p-10 shadow-sm">
       <!--Tabs-->
       <div class="flex gap-3 justify-center">
         <template v-for="tab in tabs" :key="tab.id">

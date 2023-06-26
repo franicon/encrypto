@@ -62,7 +62,9 @@
           </div>
         </div>
       </div>
-      <ConfirmDialog></ConfirmDialog>
+      <ConfirmDialog>
+        <Toast />
+      </ConfirmDialog>
       <template #header>
         <div class="flex justify-end w-full"><Button icon="pi pi-times"  text @click="confirm1()"/></div>
       </template>
@@ -75,12 +77,11 @@ import { ref } from "vue";
 import { storeToRefs } from "pinia";
 import { useBuySellStore } from "@/app/stores/main/buy-sell.store";
 
+import Toast from 'primevue/toast';
 import Dialog from 'primevue/dialog';
 import Button from 'primevue/button';
 import InputText from 'primevue/inputtext';
-import Accordion from 'primevue/accordion';
 import RadioButton from 'primevue/radiobutton';
-import AccordionTab from 'primevue/accordiontab';
 import ConfirmDialog from 'primevue/confirmdialog';
 
 import { useToast } from "primevue/usetoast";

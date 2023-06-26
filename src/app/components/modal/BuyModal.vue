@@ -29,7 +29,7 @@
                   </div>
                 </div>
                 <div class="absolute bottom-[3px] left-7 w-full" v-if="selectedWallet === 'Others'">
-                  <InputText v-model="hhh" class="p-inputtext-sm w-[93%] address-input"
+                  <InputText v-model="address" class="p-inputtext-sm w-[93%] address-input"
                              placeholder="bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh"/>
                 </div>
               </div>
@@ -129,6 +129,7 @@ const wallet = ref([
 
 const active = ref(0);
 const selectedWallet = ref('Bitcoin');
+const address = ref('jjjjjj')
 
 const visible = ref(true)
 </script>

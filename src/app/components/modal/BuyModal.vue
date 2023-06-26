@@ -1,17 +1,17 @@
 <template>
 <div class="card flex justify-content-center">
-    <Dialog v-model:visible="isOpen" :closable="false" modal header="Confirm Order" class="2xl:w-[30vw] xl:w-[50vw] lg:w-[60vw] md:w-[80vw] w-[90vw]">
+    <Dialog v-model:visible="isOpen" :closable="false" modal header="Confirm Order" class="2xl:w-[20vw] xl:w-[50vw] lg:w-[60vw] md:w-[80vw] w-[90vw]">
       <div>
-        <div class="text-center py-4">
-          <i class="pi pi-qrcode text-yellow-500 pb-3" style="font-size: 2rem"></i>
-          <h1 class="font-[600] text-xl py-3">Confirm Order</h1>
-          <p class="text-sm">You are about to make a purchase of <br> <span class="text-gray-400 font-[500] pt-2 text-sm">0.0024 BTC @ 1 BTC = 2,873,930</span></p>
+        <div class="text-center py-2">
+          <i class="pi pi-qrcode text-gray-500" style="font-size: 1.5rem"></i>
+          <h1 class="font-[600] text-xl pb-1 text-gray-500">Confirm Order</h1>
+          <p class="text-sm text-gray-400">You are about to make a purchase of <br> <span class="text-gray-400 font-[500] pt-2 text-sm">0.0024 BTC @ 1 BTC = 2,873,930</span></p>
         </div>
         <div class="mt-3">
           <!--DropDown Wallet-->
           <div class="mt-8">
             <p class="text-sm font-[500] pb-2">Receiving Address</p>
-            <div class="card flex justify-content-center border px-3 pt-2">
+            <div class="card flex justify-content-center border px-3 py-2">
               <div class="flex flex-col gap-3 w-full relative overflow-hidden">
                 <div v-for="category in wallet" :key="category.key" class="flex align-items-center border-b">
                   <div class="flex justify-between w-full pb-3">
@@ -35,19 +35,11 @@
 
           <div class="mt-8">
             <p class="text-sm font-[500] pb-2">Transaction Details</p>
-            <div class="card flex justify-content-center pt-2">
-              <div class="flex flex-col gap-3 w-full relative overflow-hidden">
-                <Accordion :activeIndex="active">
-                  <AccordionTab header="Show Details">
-                    <p class="text-sm font-semibold text-gray-800">Total:</p>
-                  </AccordionTab>
-                </Accordion>
-              </div>
-            </div>
+            <div class="border p-3 rounded"></div>
           </div>
 
           <div class="mt-8 flex justify-center">
-            <button class="w-56 rounded bg-gray-700 hover:bg-gray-800 transition-all text-sm duration-500 py-4 text-gray-50 font-[500]"
+            <button class="w-40 rounded bg-gray-700 hover:bg-gray-800 transition-all text-xs duration-500 py-3 text-gray-50 font-[500]"
                    >BUY NOW
             </button>
           </div>
@@ -93,7 +85,7 @@ const confirm1 = () => {
     rejectIcon: 'pi pi-times',
     acceptButton: 'Yeoooo',
     accept: () => {
-      visible.value = false
+     store.openModal()
       toast.add({ severity: 'info', summary: 'Confirmed', detail: 'You have accepted', life: 3000 });
 
     },

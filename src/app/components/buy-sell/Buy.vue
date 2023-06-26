@@ -39,7 +39,7 @@
 
   <!--Buy Button-->
   <div class="mt-8 flex justify-center">
-    <button class="w-56 rounded bg-gray-700 hover:bg-gray-800 transition-all duration-500 py-4 text-gray-50 font-[500]"
+    <button class="w-44 rounded bg-gray-700 hover:bg-gray-800 transition-all duration-500 py-3 text-gray-50 font-[500]"
             @click="store.openModal()">Continue
     </button>
   </div>
@@ -54,8 +54,9 @@ import { ref } from "vue";
 // components
 import Dropdown from 'primevue/dropdown';
 import InputNumber from 'primevue/inputnumber';
+import RadioButton from 'primevue/radiobutton';
 import BuyModal from '@/app/components/modal/BuyModal.vue';
-import {useBuySellStore} from "@/app/stores/main/buy-sell.store";
+import { useBuySellStore } from "@/app/stores/main/buy-sell.store";
 
 
 const store = useBuySellStore();

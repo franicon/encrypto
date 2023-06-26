@@ -27,7 +27,7 @@
                   </div>
                 </div>
                 <div class="absolute bottom-[3px] left-7 w-full"  v-if="selectedWallet === 'Others'">
-                  <InputText  v-model="value" class="p-inputtext-sm w-[93%] address-input" placeholder="bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh" />
+                  <InputText  v-model="selectedWallet" class="p-inputtext-sm w-[93%] address-input" placeholder="bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh" />
                 </div>
               </div>
             </div>

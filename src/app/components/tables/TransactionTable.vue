@@ -73,8 +73,5 @@ tbody {
   font-weight: 600;
   text-align: left !important;
 }
-td {
-  padding: 0 20px !important;
-  margin: 0 !important;
-}
+
 </style>

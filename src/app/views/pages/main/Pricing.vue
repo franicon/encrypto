@@ -13,12 +13,32 @@
             </div>
           </template>
         </Column>
-        <Column header="Price" field="high_24h" sortable style="width: 10%"></Column>
-        <Column header="1Hour" field="Category" sortable style="width: 10%"></Column>
-        <Column header="7Days" field="Quantity" sortable style="width: 10%"></Column>
-        <Column header="24Th Volume" field="Quantity" sortable style="width: 10%"></Column>
-        <Column header="Market Cap" field="Quantity" sortable style="width: 10%"></Column>
-        <Column header="Last 7 Days" field="Quantity" sortable style="width: 10%"></Column>
+        <Column header="Price" field="current_price" sortable style="width: 10%">
+          <template #body="{ data }">
+            <div class="flex items-center gap-2">
+              <span> $ {{ data.current_price.toLocaleString() }}</span>
+            </div>
+          </template>
+        </Column>
+        <Column header="High 24h" field="high_24h" sortable style="width: 10%">
+          <template #body="{ data }">
+            <div class="flex items-center gap-2">
+              <i class="pi text-emerald-500 pi-arrow-up" style="font-size: 0.7rem"></i>
+              <span>{{ data.high_24h.toLocaleString() }}</span>
+            </div>
+          </template>
+        </Column>
+        <Column header="low 24h" field="low_24h" sortable style="width: 10%">
+          <template #body="{ data }">
+            <div class="flex items-center gap-2">
+              <i class="pi text-red-600 pi-arrow-down" style="font-size: 0.7rem"></i>
+              <span>{{ data.low_24h.toLocaleString() }}</span>
+            </div>
+          </template>
+        </Column>
+        <Column header="24Th change" field="price_change_24h" sortable style="width: 10%"></Column>
+        <Column header="Market Cap" field="market_cap" sortable style="width: 10%"></Column>
+        <Column header="Market Rank" field="market_cap_rank" sortable style="width: 10%"></Column>
       </DataTable>
     </div>
   </div>

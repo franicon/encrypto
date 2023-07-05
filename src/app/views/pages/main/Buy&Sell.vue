@@ -15,7 +15,9 @@
         <Buy/>
       </div>
       <!--Buy-->
-      <div class="mt-8" v-else>Sell</div>
+      <div class="mt-8" v-else>
+        <Buy/>
+      </div>
     </div>
   </div>
 </template>

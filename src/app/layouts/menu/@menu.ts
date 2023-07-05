@@ -22,7 +22,7 @@ const navList: menu[] = [
                 to: '/buy-sell'
             },
             {
-                label: 'Orders',
+                label: 'Wallets',
                 icon: 'pi pi-wallet',
                 to: '/orders'
             },
